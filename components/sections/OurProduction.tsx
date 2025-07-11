@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { useState } from 'react';
 import CollapseItem from '@/components/common/CollapseItem';
 import TabSwitcher from '@/components/common/TabSwitcher';
@@ -14,21 +14,26 @@ export default function OurProduction() {
           Products We Offer
         </h2>
         <p className="lg:text-lg text-center text-[#020f2c] lg:w-3xl w-auto text-xs mx-auto font-normal">
-          Interface Design · Business Processes · Operational Models — All Tailored to You
+          Interface Design · Business Processes · Operational Models — All
+          Tailored to You
         </p>
-        
+
         <div className="lg:mt-[58px] lg:mb-[72px] my-6">
-          <TabSwitcher tabs={tabs} activeTab={activeTab} onTabChange={setActiveTab} />
+          <TabSwitcher
+            tabs={tabs}
+            activeTab={activeTab}
+            onTabChange={setActiveTab}
+          />
         </div>
-        
+
         <div className="flex flex-col lg:flex-row lg:mb-[166px] lg:p-0 p-3 mb-6">
           {/* Left Side - Content */}
           <div className="flex-1 lg:mr-[120px] mb-10 lg:mb-0">
             <h3 className="text-xl font-medium text-[#020f2c] mb-[50px] text-left leading-7">
-              All-in-one CRM solution: Automate mid-backend operations, boost customer management efficiency, and drive
-              revenue growth.
+              All-in-one CRM solution: Automate mid-backend operations, boost
+              customer management efficiency, and drive revenue growth.
             </h3>
-            
+
             <div className="mb-8">
               <CollapseItem
                 title="Adopted by anyone"
@@ -48,18 +53,20 @@ export default function OurProduction() {
                 content="Monitor all market activities with real-time data analysis and actionable insights."
               />
             </div>
-            
+
             <button className="bg-black text-white w-[130px] h-[50px] rounded-[14px] font-semibold flex items-center justify-center mt-6 transition-colors">
               <span className="text-base font-semibold">read more</span>
             </button>
           </div>
-          
+
           {/* Right Side - Image */}
           <div className="flex-none w-full lg:w-[718px] h-[538px] rounded-[24px] overflow-hidden relative">
             <div className="absolute inset-0 bg-gradient-to-r from-[#4deeff] via-[#0154fc] to-[#733bff]">
-              <div 
-                className="absolute inset-0 bg-cover bg-no-repeat" 
-                style={{ backgroundImage: `url('/assets/官网产品图 _crm.png')` }}
+              <div
+                className="absolute inset-0 bg-cover bg-no-repeat"
+                style={{
+                  backgroundImage: `url('/assets/官网产品图 _crm.png')`,
+                }}
               ></div>
             </div>
           </div>
