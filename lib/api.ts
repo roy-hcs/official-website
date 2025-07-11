@@ -1,12 +1,12 @@
 // Base API configuration and utility functions
-const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL
+const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 /**
  * Generic fetch wrapper with error handling
  */
 const fetchAPI = async (endpoint: string, options: RequestInit = {}) => {
   const url = `${BASE_URL}${endpoint}`;
-  
+
   const response = await fetch(url, {
     ...options,
     headers: {
@@ -37,7 +37,7 @@ export const submitInfo = async (params: {
   return fetchAPI('/system/lead/add', {
     method: 'POST',
     headers: {
-      'Time-Zone': Intl.DateTimeFormat().resolvedOptions().timeZone
+      'Time-Zone': Intl.DateTimeFormat().resolvedOptions().timeZone,
     },
     body: JSON.stringify(params),
   });
