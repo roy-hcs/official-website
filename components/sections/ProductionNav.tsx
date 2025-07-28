@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import GetDemoInput from './GetDemoInput';
+import DownArrow from '@/components/icons/DownArrow';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,23 +11,26 @@ import {
   // DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-interface ProductionNavProps {
-  onOpen?: () => void;
-}
+import MenuOne from '@/components/icons/MenuOne';
 
-export default function ProductionNav({ onOpen }: ProductionNavProps) {
-  const handleOpen = () => {
-    onOpen?.();
-  };
-
+export default function ProductionNav() {
   return (
     <div
       className="relative w-full pt-21 bg-white text-center lg:h-[1200px] h-auto box-border"
       style={{
-        backgroundImage: `url('/assets/grid-bg.png'), url('/assets/首图背景.png')`,
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
+        // backgroundImage: `url('/assets/grid-bg.png'), url('/assets/首图背景.png')`,
+        // backgroundRepeat: 'no-repeat',
+        // backgroundPosition: 'center',
+        // backgroundSize: 'cover',
+        background: `url('/assets/grid-bg.png'),radial-gradient(
+            circle at left bottom, 
+            #4deeff80,
+            transparent 70%
+          ), radial-gradient(
+            circle at right bottom, 
+            #0154FC,
+            transparent 62%
+          )`,
       }}
     >
       {/* Header */}
@@ -49,38 +53,44 @@ export default function ProductionNav({ onOpen }: ProductionNavProps) {
               <DropdownMenu>
                 <DropdownMenuTrigger className="font-semibold text-base text-[#020f2c] focus:outline-none flex items-center group">
                   Products
-                  {ArrowSvg()}
+                  <DownArrow className="ml-1 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-[520px] p-[32px] border-0 rounded-[24px] bg-[#ffffff] box-show: 0px 11px 24px 0px #A1ADC91A">
-                  <DropdownMenuItem className="bg-[#0154FC0D] rounded-[16px] pt-[16px] pr-[16px] pb-[38px] pl-[16px]">
-                    <div className="w-[48px] h-[48px]">{MenuOne()}</div>
+                <DropdownMenuContent className="w-[520px] p-[32px] border-0 rounded-[24px] bg-[#ffffff] [box-shadow:0px_11px_24px_0px_#A1ADC91A,0px_44px_44px_0px_#A1ADC917,0px_99px_59px_0px_#A1ADC90D,0px_176px_70px_0px_#A1ADC903,0px_275px_77px_0px_#A1ADC900]">
+                  <DropdownMenuItem className="group hover:bg-[#0154FC0D] items-start rounded-[16px] pt-[16px] pr-[16px] pb-[38px] pl-[16px]">
+                    <div className="grow-0 shrink-0 basis-[48px] h-[48px]">
+                      <MenuOne className="w-full h-full group-hover:text-[#0154FC]" />
+                    </div>
                     <div>
-                      <span className="font-weight-[500] font-size[18px] text-align-left text-[#020f2c]">
+                      <span className="font-weight-[500] font-size[18px] text-align-left text-[#020f2c] group-hover:text-[#0154FC]">
                         CRM
                       </span>
-                      <p className="text-sm text-[#656b8a] mt-1">
+                      <p className="text-sm text-[#656b8a] mt-1 group-hover:text-[#0154FC]">
                         Full-process AutomationMulti-asset Smart Operations Hub
                       </p>
                     </div>
                   </DropdownMenuItem>
-                  <DropdownMenuItem className="pt-[16px] pr-[16px] pb-[38px] pl-[16px]">
-                    <div className="w-[48px] h-[48px]">{MenuOne()}</div>
+                  <DropdownMenuItem className="group hover:bg-[#0154FC0D] items-start rounded-[16px] pt-[16px] pr-[16px] pb-[38px] pl-[16px]">
+                    <div className="grow-0 shrink-0 basis-[48px] h-[48px]">
+                      <MenuOne className="w-full h-full group-hover:text-[#0154FC]" />
+                    </div>
                     <div>
-                      <span className="font-weight-[500] font-size[18px] text-align-left text-[#020f2c]">
+                      <span className="font-weight-[500] font-size[18px] text-align-left text-[#020f2c] group-hover:text-[#0154FC]">
                         CRM
                       </span>
-                      <p className="text-sm text-[#656b8a] mt-1">
+                      <p className="text-sm text-[#656b8a] mt-1 group-hover:text-[#0154FC]">
                         Full-process AutomationMulti-asset Smart Operations Hub
                       </p>
                     </div>
                   </DropdownMenuItem>
-                  <DropdownMenuItem className="pt-[16px] pr-[16px] pb-[38px] pl-[16px]">
-                    <div className="w-[48px] h-[48px]">{MenuOne()}</div>
+                  <DropdownMenuItem className="group hover:bg-[#0154FC0D] items-start rounded-[16px] pt-[16px] pr-[16px] pb-[38px] pl-[16px]">
+                    <div className="grow-0 shrink-0 basis-[48px] h-[48px]">
+                      <MenuOne className="w-full h-full group-hover:text-[#0154FC]" />
+                    </div>
                     <div>
-                      <span className="font-weight-[500] font-size[18px] text-align-left text-[#020f2c]">
+                      <span className="font-weight-[500] font-size[18px] text-align-left text-[#020f2c] group-hover:text-[#0154FC]">
                         CRM
                       </span>
-                      <p className="text-sm text-[#656b8a] mt-1">
+                      <p className="text-sm text-[#656b8a] mt-1 group-hover:text-[#0154FC]">
                         Full-process AutomationMulti-asset Smart Operations Hub
                       </p>
                     </div>
@@ -133,10 +143,7 @@ export default function ProductionNav({ onOpen }: ProductionNavProps) {
           </div>
 
           {/* Get Demo Button */}
-          <div
-            className="flex-shrink-0 w-[138px] h-10 border border-[#8f9dbd] box-border text-base font-semibold text-[#020f2c] leading-10 text-center rounded-xl cursor-pointer hidden lg:block"
-            onClick={handleOpen}
-          >
+          <div className="flex-shrink-0 w-[138px] h-10 border border-[#8f9dbd] box-border text-base font-semibold text-[#020f2c] leading-10 text-center rounded-xl cursor-pointer hidden lg:block">
             Get a Demo
           </div>
         </div>
@@ -160,7 +167,7 @@ export default function ProductionNav({ onOpen }: ProductionNavProps) {
 
         {/* Product Image */}
         <div
-          className="w-full lg:w-[1200px] h-0 mt-[88px] mx-auto pt-[52%] bg-no-repeat bg-contain bg-center"
+          className="w-full lg:w-[1200px] h-0 mt-[66px] mx-auto pt-[52%] bg-no-repeat bg-contain bg-center"
           style={{
             backgroundImage: `url('/assets/首图产品展示.png')`,
           }}
@@ -175,48 +182,5 @@ export default function ProductionNav({ onOpen }: ProductionNavProps) {
         }}
       ></div>
     </div>
-  );
-}
-
-function ArrowSvg() {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 17 17"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="ml-1 transition-transform duration-200 group-data-[state=open]:rotate-180"
-    >
-      <path
-        d="M12.7671 6.5L8.76709 10.5L4.76709 6.5"
-        stroke="#333333"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function MenuOne() {
-  return (
-    <svg
-      className="w-[48px] h-[48px]"
-      width="48"
-      height="48"
-      viewBox="0 0 48 48"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect width="48" height="48" fill="white" />
-      <path
-        d="M36.28 29.1867C35.4318 31.1927 34.1051 32.9603 32.4158 34.3351C30.7266 35.7099 28.7264 36.6499 26.5899 37.0731C24.4535 37.4962 22.2459 37.3895 20.1602 36.7624C18.0745 36.1353 16.1742 35.0068 14.6254 33.4756C13.0766 31.9443 11.9264 30.057 11.2755 27.9786C10.6246 25.9002 10.4928 23.694 10.8915 21.5529C11.2902 19.4117 12.2073 17.4009 13.5627 15.6961C14.9181 13.9913 16.6705 12.6444 18.6667 11.7733M36 24C36.736 24 37.34 23.4013 37.2667 22.6693C36.9593 19.6082 35.6028 16.7476 33.4271 14.5724C31.2514 12.3973 28.3905 11.0414 25.3293 10.7347C24.596 10.6613 23.9987 11.2653 23.9987 12.0013V22.668C23.9987 23.0216 24.1392 23.3608 24.3892 23.6108C24.6392 23.8609 24.9784 24.0013 25.332 24.0013L36 24Z"
-        stroke="#020F2C"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
   );
 }

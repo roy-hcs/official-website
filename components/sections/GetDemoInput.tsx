@@ -10,7 +10,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog';
-
+import CloseIcon from '@/components/icons/CloseIcon';
 export default function GetDemoInput() {
   const [email, setEmail] = useState('');
   return (
@@ -39,20 +39,7 @@ export default function GetDemoInput() {
             {/* 右上角关闭按钮 */}
             <AlertDialogCancel className="absolute top-4 right-4 h-8 w-8 rounded-full p-0 hover:bg-gray-100 border-0">
               <div className="w-[24px] h-[24px]">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M18 6L6 18M6 6L18 18"
-                    stroke="black"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                <CloseIcon />
               </div>
             </AlertDialogCancel>
 

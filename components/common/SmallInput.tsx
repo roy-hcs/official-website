@@ -1,10 +1,6 @@
 import { ChangeEvent, useState } from 'react';
 
-interface SmallInputProps {
-  onOpen?: () => void;
-}
-
-export default function SmallInput({ onOpen }: SmallInputProps) {
+export default function SmallInput() {
   const [email, setEmail] = useState('');
 
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -21,10 +17,7 @@ export default function SmallInput({ onOpen }: SmallInputProps) {
           onChange={handleEmailChange}
           className="border-none outline-none flex-1 pl-3 placeholder:text-base placeholder:font-semibold placeholder:text-[#8f96bd]"
         />
-        <div
-          className="w-[134px] h-full text-base font-semibold text-white bg-black rounded-[12px] cursor-pointer flex items-center justify-center"
-          onClick={onOpen}
-        >
+        <div className="w-[134px] h-full text-base font-semibold text-white bg-black rounded-[12px] cursor-pointer flex items-center justify-center">
           Get A Demo
         </div>
       </div>
