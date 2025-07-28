@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import { useState } from 'react';
 
 interface CollapseItemProps {
@@ -7,7 +7,11 @@ interface CollapseItemProps {
   defaultOpen?: boolean;
 }
 
-export default function CollapseItem({ title, content, defaultOpen = false }: CollapseItemProps) {
+export default function CollapseItem({
+  title,
+  content,
+  defaultOpen = false,
+}: CollapseItemProps) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   const toggle = () => {
@@ -16,11 +20,11 @@ export default function CollapseItem({ title, content, defaultOpen = false }: Co
 
   return (
     <div className={`collapse-item ${isOpen ? 'collapse-item-active' : ''}`}>
-      <div 
-        className="flex justify-between items-center cursor-pointer py-6" 
+      <div
+        className="flex justify-between items-center cursor-pointer py-6"
         onClick={toggle}
       >
-        <span 
+        <span
           className={`font-semibold text-base leading-6 transition-colors ${
             isOpen ? 'text-[#0154fc]' : 'text-[#020f2c]'
           }`}
@@ -29,7 +33,13 @@ export default function CollapseItem({ title, content, defaultOpen = false }: Co
         </span>
         <span className="icon">
           {isOpen ? (
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <path
                 d="M18 15L12 9L6 15"
                 stroke="#656B8A"
@@ -39,7 +49,13 @@ export default function CollapseItem({ title, content, defaultOpen = false }: Co
               />
             </svg>
           ) : (
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <path
                 d="M18 9L12 15L6 9"
                 stroke="#656B8A"

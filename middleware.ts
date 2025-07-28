@@ -1,7 +1,7 @@
 import { NextResponse, NextRequest } from 'next/server';
 import * as Sentry from '@sentry/nextjs';
 
-export function middleware(request: NextRequest) {  
+export function middleware(request: NextRequest) {
   try {
     // Process the request and continue
     return NextResponse.next();

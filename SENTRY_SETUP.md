@@ -16,6 +16,7 @@ The following Sentry integration has been completed:
 ## Files Added/Modified
 
 ### Configuration Files
+
 - `instrumentation.ts`: Main instrumentation file for server/edge runtime
 - `instrumentation-client.ts`: Client-side instrumentation
 - `sentry.server.config.ts`: Server-side Sentry configuration
@@ -23,15 +24,18 @@ The following Sentry integration has been completed:
 - `next.config.ts`: Updated with Sentry webpack plugin
 
 ### Error Handling
+
 - `app/error.tsx`: Route-level error boundary
 - `app/global-error.tsx`: Application-level error boundary
 - `components/common/ErrorBoundary.tsx`: Reusable error boundary component
 
 ### Utilities
+
 - `lib/sentry.ts`: Sentry helper functions and utilities
 - `middleware.ts`: Middleware with automatic error capture
 
 ### Documentation
+
 - `.env.local.example`: Environment variables template
 - `SENTRY_SETUP.md`: This setup guide
 
@@ -95,7 +99,10 @@ export async function GET(request: NextRequest) {
       method: 'GET',
       status: 500,
     });
-    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Internal Server Error' },
+      { status: 500 }
+    );
   }
 }
 ```

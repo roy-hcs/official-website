@@ -1,12 +1,8 @@
-"use client"
+'use client';
 import Image from 'next/image';
 import SmallInput from '../common/SmallInput';
 
-interface MyFooterProps {
-  onOpen?: () => void;
-}
-
-export default function MyFooter({ onOpen }: MyFooterProps) {
+export default function MyFooter() {
   return (
     <div className="w-full h-[930px] mx-auto bg-[url('/assets/页尾背景.png')] bg-white bg-no-repeat bg-[center_38px] bg-[length:100%] text-center">
       <div className="relative w-[1106px] mx-auto pt-[166px] max-lg:w-full max-lg:pt-12">
@@ -14,10 +10,11 @@ export default function MyFooter({ onOpen }: MyFooterProps) {
           Ready to transform your brokerage operations?
         </div>
         <div className="w-[534px] mt-12 mb-[82px] h-12 text-lg font-medium leading-6 text-[#020f2c] text-left max-lg:w-full max-lg:text-xs max-lg:px-3 max-lg:box-border max-lg:leading-normal max-lg:my-3">
-          Our team will present the solution,demonstrate demo-cases, provide a commercial offer
+          Our team will present the solution,demonstrate demo-cases, provide a
+          commercial offer
         </div>
-        <SmallInput onOpen={onOpen} />
-        
+        <SmallInput />
+
         <div className="footer-info">
           <div className="flex mt-[88px] max-lg:block max-lg:mt-6 max-lg:px-3">
             {/* Footer Info Top Description */}
@@ -31,44 +28,83 @@ export default function MyFooter({ onOpen }: MyFooterProps) {
                 />
               </div>
               <p className="font-normal text-sm text-[#656b8a] leading-6 text-left">
-                As a financial technology company headquartered in Hong Kong, Haame is committed to providing reliable and
-                continuous CRM operation management system services to brokerages and exchanges around the world.
+                As a financial technology company headquartered in Hong Kong,
+                Haame is committed to providing reliable and continuous CRM
+                operation management system services to brokerages and exchanges
+                around the world.
               </p>
             </div>
-            
+
             {/* Solutions */}
             <div className="flex-1 text-left pl-[162px] max-lg:pl-0 max-lg:mt-6">
-              <div className="font-bold text-sm text-[#0f172a] mb-[14px]">Solutions</div>
-              <div className="font-normal text-sm text-[#656b8a] mb-4">Brokerages</div>
-              <div className="font-normal text-sm text-[#656b8a] mb-4">Exchange</div>
-              <div className="font-normal text-sm text-[#656b8a] mb-4">Asset Management</div>
+              <div className="font-bold text-sm text-[#0f172a] mb-[14px]">
+                Solutions
+              </div>
+              <div className="font-normal text-sm text-[#656b8a] mb-4">
+                Brokerages
+              </div>
+              <div className="font-normal text-sm text-[#656b8a] mb-4">
+                Exchange
+              </div>
+              <div className="font-normal text-sm text-[#656b8a] mb-4">
+                Asset Management
+              </div>
             </div>
-            
+
             {/* Products */}
             <div className="flex-1 text-left max-lg:mt-6">
-              <div className="font-bold text-sm text-[#0f172a] mb-[14px]">Products</div>
+              <div className="font-bold text-sm text-[#0f172a] mb-[14px]">
+                Products
+              </div>
               <div className="font-normal text-sm text-[#656b8a] mb-4">CRM</div>
-              <div className="font-normal text-sm text-[#656b8a] mb-4">PAMM</div>
-              <div className="font-normal text-sm text-[#656b8a] mb-4">CopyTrading</div>
+              <div className="font-normal text-sm text-[#656b8a] mb-4">
+                PAMM
+              </div>
+              <div className="font-normal text-sm text-[#656b8a] mb-4">
+                CopyTrading
+              </div>
             </div>
-            
+
             {/* Links */}
             <div className="flex-1 text-left max-lg:mt-6">
-              <div className="font-bold text-sm text-[#0f172a] mb-[14px]">Links</div>
-              <div className="font-normal text-sm text-[#656b8a] mb-4">Insights</div>
-              <div className="font-normal text-sm text-[#656b8a] mb-4">Event</div>
-              <div className="font-normal text-sm text-[#656b8a] mb-4">About</div>
+              <div className="font-bold text-sm text-[#0f172a] mb-[14px]">
+                Links
+              </div>
+              <div className="font-normal text-sm text-[#656b8a] mb-4">
+                Insights
+              </div>
+              <div className="font-normal text-sm text-[#656b8a] mb-4">
+                Event
+              </div>
+              <div className="font-normal text-sm text-[#656b8a] mb-4">
+                About
+              </div>
             </div>
           </div>
-          
+
           {/* Footer Info Bottom */}
           <div className="flex justify-between items-end h-[41px] border-t border-[#f1f5f9] box-border mt-[90px] max-[750px]:block max-[750px]:pt-3">
             <div className="font-normal text-xs text-[#64748b]">
               Copyright © HAAME TECH LIMITED 2024. All Rights Reserved
             </div>
             <div className="mr-[84px] max-[750px]:mr-0 max-[750px]:mt-3 max-[750px]:text-center">
-              <svg className="inline-block ml-6 cursor-pointer first:ml-0" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <mask id="mask0_0_737" style={{maskType: 'luminance'}} maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+              <svg
+                className="inline-block ml-6 cursor-pointer first:ml-0"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <mask
+                  id="mask0_0_737"
+                  style={{ maskType: 'luminance' }}
+                  maskUnits="userSpaceOnUse"
+                  x="0"
+                  y="0"
+                  width="20"
+                  height="20"
+                >
                   <path d="M0 0H20V20H0V0Z" fill="white" />
                 </mask>
                 <g mask="url(#mask0_0_737)">
@@ -84,8 +120,23 @@ export default function MyFooter({ onOpen }: MyFooterProps) {
                   />
                 </g>
               </svg>
-              <svg className="inline-block ml-6 cursor-pointer" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <mask id="mask0_0_738" style={{maskType: 'luminance'}} maskUnits="userSpaceOnUse" x="0" y="0" width="21" height="20">
+              <svg
+                className="inline-block ml-6 cursor-pointer"
+                width="21"
+                height="20"
+                viewBox="0 0 21 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <mask
+                  id="mask0_0_738"
+                  style={{ maskType: 'luminance' }}
+                  maskUnits="userSpaceOnUse"
+                  x="0"
+                  y="0"
+                  width="21"
+                  height="20"
+                >
                   <path d="M0.5 0H20.5V20H0.5V0Z" fill="white" />
                 </mask>
                 <g mask="url(#mask0_0_738)">
@@ -95,13 +146,27 @@ export default function MyFooter({ onOpen }: MyFooterProps) {
                   />
                 </g>
               </svg>
-              <svg className="inline-block ml-6 cursor-pointer" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                className="inline-block ml-6 cursor-pointer"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M19.5825 5.169C19.3517 4.29817 18.6717 3.619 17.8 3.3865C16.35 2.9165 10 2.9165 10 2.9165C10 2.9165 3.65 2.9165 2.2 3.3865C1.3275 3.61984 0.6475 4.29984 0.416667 5.169C0.000833323 6.74734 0 9.99984 0 9.99984C0 9.99984 0 13.2523 0.416667 14.8307C0.6475 15.7015 1.3275 16.3807 2.19917 16.6132C3.65 17.0832 10 17.0832 10 17.0832C10 17.0832 16.35 17.0832 17.8 16.6132C18.6708 16.3807 19.35 15.7015 19.5825 14.8307C19.9992 13.2523 19.9992 9.99984 19.9992 9.99984C19.9992 9.99984 19.9992 6.74734 19.5825 5.169ZM8.125 12.5015V7.5015L13.125 10.0015L8.125 12.5015Z"
                   fill="#656B8A"
                 />
               </svg>
-              <svg className="inline-block ml-6 cursor-pointer" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                className="inline-block ml-6 cursor-pointer"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
                   d="M18.5195 0H1.47656C0.660156 0 0 0.644531 0 1.44141V18.5547C0 19.3516 0.660156 20 1.47656 20H18.5195C19.3359 20 20 19.3516 20 18.5586V1.44141C20 0.644531 19.3359 0 18.5195 0ZM5.93359 17.043H2.96484V7.49609H5.93359V17.043ZM4.44922 6.19531C3.49609 6.19531 2.72656 5.42578 2.72656 4.47656C2.72656 3.52734 3.49609 2.75781 4.44922 2.75781C5.39844 2.75781 6.16797 3.52734 6.16797 4.47656C6.16797 5.42188 5.39844 6.19531 4.44922 6.19531ZM17.043 17.043H14.0781V12.4023C14.0781 11.2969 14.0586 9.87109 12.5352 9.87109C10.9922 9.87109 10.7578 11.0781 10.7578 12.3242V17.043H7.79688V7.49609H10.6406V8.80078H10.6797C11.0742 8.05078 12.043 7.25781 13.4844 7.25781C16.4883 7.25781 17.043 9.23438 17.043 11.8047V17.043Z"
                   fill="#656B8A"
@@ -110,7 +175,7 @@ export default function MyFooter({ onOpen }: MyFooterProps) {
             </div>
           </div>
         </div>
-        
+
         {/* Background Elements */}
         <div className="absolute top-0 left-[calc(646px+36px)] w-[462px] h-[406px] bg-[url('/assets/logo-立体效果-1.png')] bg-no-repeat bg-center bg-cover max-lg:hidden"></div>
         <div className="absolute top-[38px] left-[646px] w-[90px] h-[120px] bg-[url('/assets/logo-立体效果-2.png')] bg-no-repeat bg-center bg-cover max-lg:hidden"></div>

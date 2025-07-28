@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* Custom Font Face for Inter */
 @font-face {
@@ -36,13 +36,14 @@
   font-style: normal;
 }
 
-
 html,
 body {
 }
 
 body {
-  font-family: 'Inter', 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback';
+  font-family:
+    'Inter', 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial,
+    sans-serif, 'Droid Sans Fallback';
   line-height: 1.6;
   user-select: none;
   -webkit-font-smoothing: antialiased;
@@ -88,7 +89,7 @@ body {
 }
 
 @keyframes marquee {
-  0% { 
+  0% {
     transform: translateX(0%);
   }
   100% {
