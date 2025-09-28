@@ -1,12 +1,16 @@
-import * as Sentry from "@sentry/nextjs";
+import * as Sentry from '@sentry/nextjs';
 
 /**
  * Captures an exception with additional context
  */
-export function captureException(error: Error, context?: Record<string, unknown>, tags?: Record<string, string>) {
-  return Sentry.withScope((scope) => {
+export function captureException(
+  error: Error,
+  context?: Record<string, unknown>,
+  tags?: Record<string, string>
+) {
+  return Sentry.withScope(scope => {
     if (context) {
-      scope.setContext("additional_context", context);
+      scope.setContext('additional_context', context);
     }
     if (tags) {
       scope.setTags(tags);
@@ -18,10 +22,14 @@ export function captureException(error: Error, context?: Record<string, unknown>
 /**
  * Captures a message with additional context
  */
-export function captureMessage(message: string, level: 'debug' | 'info' | 'warning' | 'error' | 'fatal' = 'info', context?: Record<string, unknown>) {
-  return Sentry.withScope((scope) => {
+export function captureMessage(
+  message: string,
+  level: 'debug' | 'info' | 'warning' | 'error' | 'fatal' = 'info',
+  context?: Record<string, unknown>
+) {
+  return Sentry.withScope(scope => {
     if (context) {
-      scope.setContext("additional_context", context);
+      scope.setContext('additional_context', context);
     }
     return Sentry.captureMessage(message, level);
   });
@@ -54,10 +62,9 @@ export function addBreadcrumb(breadcrumb: {
 /**
  * Wrapper for async functions to automatically capture exceptions
  */
-export function withSentryWrapper<T extends (...args: unknown[]) => Promise<unknown>>(
-  fn: T,
-  context?: Record<string, unknown>
-): T {
+export function withSentryWrapper<
+  T extends (...args: unknown[]) => Promise<unknown>,
+>(fn: T, context?: Record<string, unknown>): T {
   return (async (...args: Parameters<T>) => {
     try {
       return await fn(...args);
@@ -73,11 +80,9 @@ export function withSentryWrapper<T extends (...args: unknown[]) => Promise<unkn
 /**
  * Performance monitoring wrapper
  */
-export function withSentryPerformance<T extends (...args: unknown[]) => unknown>(
-  fn: T,
-  operationName: string,
-  description?: string
-): T {
+export function withSentryPerformance<
+  T extends (...args: unknown[]) => unknown,
+>(fn: T, operationName: string, description?: string): T {
   return ((...args: Parameters<T>) => {
     return Sentry.startSpan(
       {
@@ -101,38 +106,60 @@ export function useSentryErrorHandler() {
 /**
  * Utility to capture API errors
  */
-export function captureApiError(error: Error, request: {
-  url: string;
-  method: string;
-  status?: number;
-  body?: unknown;
-}) {
-  return captureException(error, {
-    api_request: request,
-  }, {
-    error_type: 'api_error'
-  });
+export function captureApiError(
+  error: Error,
+  request: {
+    url: string;
+    method: string;
+    status?: number;
+    body?: unknown;
+  }
+) {
+  return captureException(
+    error,
+    {
+      api_request: request,
+    },
+    {
+      error_type: 'api_error',
+    }
+  );
 }
 
 /**
  * Utility to capture database errors
  */
-export function captureDatabaseError(error: Error, query?: string, params?: unknown) {
-  return captureException(error, {
-    database_query: query,
-    database_params: params,
-  }, {
-    error_type: 'database_error'
-  });
+export function captureDatabaseError(
+  error: Error,
+  query?: string,
+  params?: unknown
+) {
+  return captureException(
+    error,
+    {
+      database_query: query,
+      database_params: params,
+    },
+    {
+      error_type: 'database_error',
+    }
+  );
 }
 
 /**
  * Utility to capture validation errors
  */
-export function captureValidationError(error: Error, formData?: Record<string, unknown>) {
-  return captureException(error, {
-    form_data: formData,
-  }, {
-    error_type: 'validation_error'
-  });
+export function captureValidationError(
+  error: Error,
+  formData?: Record<string, unknown>
+) {
+  return captureException(
+    error,
+    {
+      form_data: formData,
+    },
+    {
+      error_type: 'validation_error',
+    }
+  );
 }
