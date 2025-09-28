@@ -41,16 +41,19 @@ This is the refactored version of the Haame website, migrated from Vue 3 to Next
 ## 🎨 Design System
 
 ### Colors
+
 - Primary: Blue (#3b82f6)
 - Secondary: Purple (#8b5cf6)
 - Gradient combinations for modern UI
 
 ### Typography
+
 - Inter font family (Light, Regular, Medium, SemiBold, Bold)
 - Responsive text sizes
 - Proper line heights for readability
 
 ### Components
+
 - **TopHeader**: Hero section with navigation and background image
 - **SystemDes**: Feature cards with icons and descriptions
 - **ProductionNav**: Tabbed navigation for products
@@ -64,17 +67,20 @@ This is the refactored version of the Haame website, migrated from Vue 3 to Next
 ## 🛠️ Development
 
 ### Prerequisites
-- Node.js 18+ 
+
+- Node.js 18+
 - npm or yarn
 
 ### Getting Started
 
 1. Install dependencies:
+
    ```bash
    npm install
    ```
 
 2. Run the development server:
+
    ```bash
    npm run dev
    ```
@@ -92,12 +98,12 @@ npm start
 
 ### From Vue 3 to Next.js 15.3.5
 
-1. **Component Migration**: 
+1. **Component Migration**:
    - Converted Vue SFC components to React functional components
    - Used React hooks instead of Vue Composition API
    - Migrated template syntax to JSX
 
-2. **Styling**: 
+2. **Styling**:
    - Replaced raw CSS with Tailwind CSS classes
    - Maintained visual consistency with original design
    - Added custom font loading for Inter font family
