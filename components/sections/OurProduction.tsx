@@ -6,6 +6,8 @@ import TabSwitcher from '@/components/common/TabSwitcher';
 export default function OurProduction() {
   const [activeTab, setActiveTab] = useState('CRM');
   const tabs = ['CRM', 'PAMM', 'Copy Trading'];
+  // 手风琴当前展开索引；-1 表示全部收起
+  const [activeAccordion, setActiveAccordion] = useState<number>(0);
 
   return (
     <section className="w-full bg-white">
@@ -35,23 +37,52 @@ export default function OurProduction() {
             </h3>
 
             <div className="mb-8">
-              <CollapseItem
-                title="Adopted by anyone"
-                content="Monitor all market activities with real-time data analysis and actionable insights."
-                defaultOpen={true}
-              />
-              <CollapseItem
-                title="Open & extendable"
-                content="Monitor all market activities with real-time data analysis and actionable insights."
-              />
-              <CollapseItem
-                title="Al-driven workflows"
-                content="Monitor all market activities with real-time data analysis and actionable insights."
-              />
-              <CollapseItem
-                title="Dashboard anything"
-                content="Monitor all market activities with real-time data analysis and actionable insights."
-              />
+              {[
+                {
+                  title: 'Basic Business',
+                  content: [
+                    'Dashboard: Comprehensive operational data statistics display board.',
+                    'Wallet: Supports wallet system.',
+                    'KYC: Built in Basci version KYC function, and can also directly use Sumsubs KYC verification service.',
+                    'Customer follow-up: A complete customer follow-up system allows you to follow up on customers KYC, account opening, and deposits.',
+                    'Customer tags: Allow customization of personalized tags based on customer information and behavior, combined with email and marketing functions, to operate customers from multiple dimensions.',
+                  ],
+                },
+                {
+                  title: 'IB Management',
+                  content: [
+                    'Customer Promotion Link: Through the link, promote customers and limit account opening groups and leverage.',
+                    'Proxy promotion: Promote subordinate agents through links. In addition to restricting the opening of subordinate agents, it is also possible to control the scope of business conducted by subordinate agents.',
+                  ],
+                },
+                {
+                  title: 'Reports',
+                  content: [
+                    'Capital Report: Overview of wallet funds, trading account funds, and fund operations.',
+                    'Trading Report: Overview of trading order data.',
+                    'Commission Report: Trading rebates, handling fee rebates, and deposit rebates.',
+                    'IB Report: Overview of IB business development and tracking of new IB customer business progress.',
+                  ],
+                },
+                {
+                  title: 'Rebates',
+                  content: [
+                    'Supports trading rebates, handling fee rebates, and deposit rebates.',
+                    'Customizable multi-level rebates with support for various rebate models. Allows for the definition of groups and varieties, and supports un',
+                    'Different agent business lines can set rebate parameters separately to ensure rebates.',
+                  ],
+                },
+              ].map((item, idx) => (
+                <CollapseItem
+                  key={item.title}
+                  title={item.title}
+                  content={item.content}
+                  open={activeAccordion === idx}
+                  onToggle={() =>
+                    setActiveAccordion(prev => (prev === idx ? -1 : idx))
+                  }
+                />
+              ))}
             </div>
 
             <button className="bg-black text-white w-[130px] h-[50px] rounded-[14px] font-semibold flex items-center justify-center mt-6 transition-colors">

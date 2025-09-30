@@ -62,11 +62,11 @@ export default function ProductionNav() {
                     </div>
                     <div>
                       <span className="font-weight-[500] font-size[18px] text-align-left text-[#020f2c] group-hover:text-[#0154FC]">
-                        CRM
+                        Forex CRM
                       </span>
-                      <p className="text-sm text-[#656b8a] mt-1 group-hover:text-[#0154FC]">
+                      {/* <p className="text-sm text-[#656b8a] mt-1 group-hover:text-[#0154FC]">
                         Full-process AutomationMulti-asset Smart Operations Hub
-                      </p>
+                      </p> */}
                     </div>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="group hover:bg-[#0154FC0D] items-start rounded-[16px] pt-[16px] pr-[16px] pb-[38px] pl-[16px]">
@@ -75,11 +75,11 @@ export default function ProductionNav() {
                     </div>
                     <div>
                       <span className="font-weight-[500] font-size[18px] text-align-left text-[#020f2c] group-hover:text-[#0154FC]">
-                        CRM
+                        Copytrading
                       </span>
-                      <p className="text-sm text-[#656b8a] mt-1 group-hover:text-[#0154FC]">
+                      {/* <p className="text-sm text-[#656b8a] mt-1 group-hover:text-[#0154FC]">
                         Full-process AutomationMulti-asset Smart Operations Hub
-                      </p>
+                      </p> */}
                     </div>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="group hover:bg-[#0154FC0D] items-start rounded-[16px] pt-[16px] pr-[16px] pb-[38px] pl-[16px]">
@@ -88,11 +88,11 @@ export default function ProductionNav() {
                     </div>
                     <div>
                       <span className="font-weight-[500] font-size[18px] text-align-left text-[#020f2c] group-hover:text-[#0154FC]">
-                        CRM
+                        PAMM
                       </span>
-                      <p className="text-sm text-[#656b8a] mt-1 group-hover:text-[#0154FC]">
+                      {/* <p className="text-sm text-[#656b8a] mt-1 group-hover:text-[#0154FC]">
                         Full-process AutomationMulti-asset Smart Operations Hub
-                      </p>
+                      </p> */}
                     </div>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
@@ -154,7 +154,7 @@ export default function ProductionNav() {
         <div className="h-[76px] lg:text-[64px] text-[28px] font-semibold text-[#041433]">
           Leading CRM for
         </div>
-        <div className="h-[86px] lg:text-[70px] text-[28px] font-semibold inline-block bg-gradient-to-r from-[#0154fc] to-[#4deeff] bg-clip-text text-transparent">
+        <div className="h-[86px] leading-21.5 lg:text-[70px] text-[28px] font-semibold inline-block bg-gradient-to-r from-[#0154fc] to-[#4deeff] bg-clip-text text-transparent">
           Brokerages & Exchanges
         </div>
         <div className="w-full max-w-[784px] font-medium lg:text-[20px] text-[12px] text-[#656b8a] lg:mt-[26px] mt-3 lg:mb-6 mb-3 mx-auto text-center lg:px-0 px-3 box-border lg:leading-[1.5]">

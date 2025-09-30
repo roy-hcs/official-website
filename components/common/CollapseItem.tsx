@@ -3,19 +3,33 @@ import { useState } from 'react';
 
 interface CollapseItemProps {
   title: string;
-  content: string;
+  content: string[];
+  /** 非受控模式下的默认展开 */
   defaultOpen?: boolean;
+  /** 受控模式：当前是否展开 */
+  open?: boolean;
+  /** 受控模式：点击切换时回调 */
+  onToggle?: () => void;
 }
 
 export default function CollapseItem({
   title,
   content,
   defaultOpen = false,
+  open,
+  onToggle,
 }: CollapseItemProps) {
-  const [isOpen, setIsOpen] = useState(defaultOpen);
+  // 如果传入 open 表示受控模式；否则使用内部状态
+  const [uncontrolledOpen, setUncontrolledOpen] = useState(defaultOpen);
+  const isControlled = typeof open === 'boolean';
+  const isOpen = isControlled ? open : uncontrolledOpen;
 
   const toggle = () => {
-    setIsOpen(!isOpen);
+    if (isControlled) {
+      onToggle?.();
+    } else {
+      setUncontrolledOpen(prev => !prev);
+    }
   };
 
   return (
@@ -25,8 +39,8 @@ export default function CollapseItem({
         onClick={toggle}
       >
         <span
-          className={`font-semibold text-base leading-6 transition-colors ${
-            isOpen ? 'text-[#0154fc]' : 'text-[#020f2c]'
+          className={`font-semibold text-base leading-6 transition-colors text-[#020f2c] ${
+            isOpen ? '' : ''
           }`}
         >
           {title}
@@ -69,7 +83,9 @@ export default function CollapseItem({
       </div>
       {isOpen && (
         <div className="text-[#656b8a] font-normal text-sm leading-[22px] text-left pb-6">
-          {content}
+          {content.map((item, index) => (
+            <div key={index}>{item}</div>
+          ))}
         </div>
       )}
       <div className="h-[1px] bg-[#d9dfeb]"></div>
