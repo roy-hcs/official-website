@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import RrhLayout from '@/components/RrhLoyout';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -32,7 +33,7 @@ export default function RootLayout({
             'Inter, PingFang SC, STHeitiSC-Light, Helvetica-Light, arial, sans-serif, Droid Sans Fallback',
         }}
       >
-        {children}
+        <RrhLayout>{children}</RrhLayout>
       </body>
     </html>
   );
