@@ -47,9 +47,9 @@ export const PAMMIconTwo: FC<SVGProps<SVGSVGElement>> = props => {
           y2="-9.9942"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#4DEEFF" />
-          <stop offset="0.65073" stop-color="#0154FC" />
-          <stop offset="1" stop-color="#733BFF" />
+          <stop stopColor="#4DEEFF" />
+          <stop offset="0.65073" stopColor="#0154FC" />
+          <stop offset="1" stopColor="#733BFF" />
         </linearGradient>
       </defs>
     </svg>

@@ -28,7 +28,6 @@ export const FeatureSection = ({
           {image && (
             <Image src={image} alt={title} className="w-full h-auto " />
           )}
-          1
         </div>
         <div className="flex flex-col gap-8 basis-1/2 flex-1 outline">
           <h2 className="text-4xl font-bold text-[#0a0a0a]">{title}</h2>

@@ -13,14 +13,14 @@ const USP = ({ usp }: { usp: USPItem }) => {
       <div>{usp.Icon}</div>
       <h3
         className={cn(
-          'text-base text-[#0a0a0a] font-semibold text-center',
+          'md:text-base text-sm text-[#0a0a0a] font-semibold text-center',
           !usp.description ? 'min-h-18' : ''
         )}
       >
         {usp.title}
       </h3>
       {usp.description && (
-        <p className="text-[#737373] text-base text-center">
+        <p className="text-[#737373] text-sm md:text-base text-center">
           {usp.description}
         </p>
       )}
