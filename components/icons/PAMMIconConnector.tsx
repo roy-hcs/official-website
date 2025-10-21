@@ -27,12 +27,12 @@ export const PAMMIconConnector: FC<SVGProps<SVGSVGElement>> = props => {
         <path
           d="M0 6.151H21V13.849H0V6.151Z"
           fill={`url(#${gradient0Id})`}
-          fill-opacity="0.39"
+          fillOpacity="0.39"
         />
         <path
           d="M32 10L21 20V0L32 10Z"
           fill={`url(#${gradient1Id})`}
-          fill-opacity="0.39"
+          fillOpacity="0.39"
         />
       </g>
       <defs>
@@ -48,8 +48,8 @@ export const PAMMIconConnector: FC<SVGProps<SVGSVGElement>> = props => {
           y2="16.69"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#0154FC" />
-          <stop offset="0.75" stop-color="#733BFF" stop-opacity="0" />
+          <stop stopColor="#0154FC" />
+          <stop offset="0.75" stopColor="#733BFF" stop-opacity="0" />
         </linearGradient>
         <linearGradient
           id={gradient1Id}
@@ -59,8 +59,8 @@ export const PAMMIconConnector: FC<SVGProps<SVGSVGElement>> = props => {
           y2="16.69"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#0154FC" />
-          <stop offset="0.75" stop-color="#733BFF" stop-opacity="0" />
+          <stop stopColor="#0154FC" />
+          <stop offset="0.75" stopColor="#733BFF" stop-opacity="0" />
         </linearGradient>
       </defs>
     </svg>
