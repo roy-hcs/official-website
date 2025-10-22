@@ -1,5 +1,7 @@
 'use client';
 import { useState } from 'react';
+import { RrhDownArrow } from '@/components/icons/RrhDownArrow';
+import { RrhUpArrow } from '@/components/icons/RrhUpArrow';
 
 interface CollapseItemProps {
   title: string;
@@ -39,56 +41,24 @@ export default function CollapseItem({
         onClick={toggle}
       >
         <span
-          className={`font-semibold text-base leading-6 transition-colors text-[#020f2c] ${
+          className={`text-[#020f2c] lg:text-sm text-xs font-[500] leading-[20px]${
             isOpen ? '' : ''
           }`}
         >
           {title}
         </span>
         <span className="icon">
-          {isOpen ? (
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M18 15L12 9L6 15"
-                stroke="#656B8A"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          ) : (
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M18 9L12 15L6 9"
-                stroke="#656B8A"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          )}
+          {isOpen ? <RrhUpArrow /> : <RrhDownArrow />}
         </span>
       </div>
       {isOpen && (
-        <div className="text-[#656b8a] font-normal text-sm leading-[22px] text-left pb-6">
+        <div className="text-[#0A0A0A] lg:text-sm text-xs font-[400] leading-[20px] text-left pb-6">
           {content.map((item, index) => (
             <div key={index}>{item}</div>
           ))}
         </div>
       )}
-      <div className="h-[1px] bg-[#d9dfeb]"></div>
+      <div className="h-[1px] bg-[#E5E5E5]"></div>
     </div>
   );
 }
