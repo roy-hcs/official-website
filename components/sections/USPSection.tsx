@@ -1,3 +1,4 @@
+'use client';
 import { cn } from '@/lib/utils';
 import useEmblaCarousel from 'embla-carousel-react';
 
@@ -30,9 +31,13 @@ const USP = ({ usp }: { usp: USPItem }) => {
 export const USPSection = ({
   USPs,
   connector,
+  className,
+  wrapperClassName,
 }: {
   USPs: USPItem[];
   connector?: React.ReactNode;
+  className?: string;
+  wrapperClassName?: string;
 }) => {
   let renderUSPs: (
     | (USPItem & { isConnector: false })
@@ -51,8 +56,10 @@ export const USPSection = ({
   const [emblaRef] = useEmblaCarousel();
 
   return (
-    <div className="md:w-[1232px] w-full mx-auto">
-      <div className="hidden md:flex items-center gap-6">
+    <div className={cn('md:w-[1232px] w-full mx-auto', className)}>
+      <div
+        className={cn('hidden md:flex items-center gap-6', wrapperClassName)}
+      >
         {renderUSPs.map((usp, index) => {
           if (usp.isConnector) {
             return <div key={index}>{connector}</div>;

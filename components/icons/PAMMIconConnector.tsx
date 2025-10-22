@@ -49,7 +49,7 @@ export const PAMMIconConnector: FC<SVGProps<SVGSVGElement>> = props => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#0154FC" />
-          <stop offset="0.75" stopColor="#733BFF" stop-opacity="0" />
+          <stop offset="0.75" stopColor="#733BFF" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id={gradient1Id}
@@ -60,7 +60,7 @@ export const PAMMIconConnector: FC<SVGProps<SVGSVGElement>> = props => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#0154FC" />
-          <stop offset="0.75" stopColor="#733BFF" stop-opacity="0" />
+          <stop offset="0.75" stopColor="#733BFF" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>
