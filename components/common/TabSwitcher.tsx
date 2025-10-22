@@ -12,12 +12,14 @@ export default function TabSwitcher({
   onTabChange,
 }: TabSwitcherProps) {
   return (
-    <div className="relative inline-flex p-2 rounded-xl bg-gradient-to-r from-[#0154fc] to-[#4deeff] left-1/2 transform -translate-x-1/2 before:content-[''] before:absolute before:-left-0.5 before:-right-0.5 before:bottom-0 before:h-full before:bg-white before:opacity-90 before:-z-10">
+    <div className="bg-[#F5F5F5] inline-flex py-[4px] px-[2px] rounded-[10px]">
       {tabs.map(tab => (
         <button
           key={tab}
-          className={`py-3 px-8 cursor-pointer transition-all text-nowrap duration-500 lg:leading-6 rounded-xl lg:text-base text-xs leading-4 font-bold ${
-            activeTab === tab ? 'bg-white text-[#0154fc]' : 'text-[#656B8A]'
+          className={`lg:text-sm text-xs text-[#0A0A0A] font-[500] py-[4px] lg:px-[44px] px-[24px] cursor-pointer transition-all text-nowrap duration-500 rounded-[8px] leading-[20px] ${
+            activeTab === tab
+              ? 'bg-[#ffffff] border border-[#ffffff] shadow-[0_1px_3px_0_rgba(0,0,0,0.10),_0_1px_2px_-1px_rgba(0,0,0,0.10)]'
+              : ''
           }`}
           onClick={() => onTabChange(tab)}
         >
