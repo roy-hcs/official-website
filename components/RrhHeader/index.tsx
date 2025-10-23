@@ -13,7 +13,38 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { CRMIcon } from '../icons/CRMIcon';
+import { PAMMIcon } from '../icons/PAMMIcon';
+import { CopyTradingIcon } from '../icons/CopyTradingIcon';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 export default function RrhHeader() {
+  const [isOpen, setIsOpen] = useState(false);
+  const navigate = useRouter();
+  const handleClick = (link: string) => {
+    navigate.push(link);
+    setIsOpen(false);
+  };
+  const dropdownItems = [
+    {
+      link: '/products/forexCRM',
+      title: 'Forex CRM',
+      desc: 'Full-process AutomationMulti-asset Smart Operations Hub',
+      Icon: <CRMIcon className="size-8 group-hover:text-[#0154FC]" />,
+    },
+    {
+      link: '/products/pamm',
+      title: 'PAMM',
+      desc: 'Pooled Fund Management ·Proportional Profit Allocation · Share-based Investment Model',
+      Icon: <PAMMIcon className="size-8 group-hover:text-[#0154FC]" />,
+    },
+    {
+      link: '/products/copyTrading',
+      title: 'Copy Trading',
+      desc: 'Strategy Replication · Multi-mode CopyTrading ·Social Trading Risk Control',
+      Icon: <CopyTradingIcon className="size-8 group-hover:text-[#0154FC]" />,
+    },
+  ];
   return (
     <>
       {/* pc */}
@@ -27,10 +58,10 @@ export default function RrhHeader() {
               <div className="flex items-center gap-1">
                 <RrhCommunication />
                 <a
-                  href="mailto:Navy@haame.com"
+                  href="mailto:info@haame.com"
                   className="text-[#fff] text-sm font-normal"
                 >
-                  Navy@haame.com
+                  info@haame.com
                 </a>
               </div>
               <div className="flex items-center gap-1">
@@ -54,10 +85,10 @@ export default function RrhHeader() {
         <div className="flex items-center gap-1">
           <RrhCommunication />
           <a
-            href="mailto:Navy@haame.com"
+            href="mailto:info@haame.com"
             className="text-[#fff] text-xs font-normal"
           >
-            Navy@haame.com
+            info@haame.com
           </a>
         </div>
         <div className="flex items-center gap-1">
@@ -78,7 +109,7 @@ export default function RrhHeader() {
               <Link href="/">
                 <Image
                   className="w-9 h-9"
-                  src="/assets/Avatar.png"
+                  src="/assets/logo.svg"
                   alt="Haame Logo"
                   width={36}
                   height={36}
@@ -88,45 +119,32 @@ export default function RrhHeader() {
               <div className="flex-1">
                 <div className="flex">
                   <div className="px-4 py-2">
-                    <DropdownMenu>
+                    <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
                       <DropdownMenuTrigger className="font-medium text-sm text-[#0a0a0a] focus:outline-none flex items-center group">
                         Products
                         <RrhChevronDown className="ml-2 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                       </DropdownMenuTrigger>
-                      <DropdownMenuContent className="w-[520px] p-[32px] border-0 rounded-[24px] bg-[#ffffff] [box-shadow:0px_11px_24px_0px_#A1ADC91A,0px_44px_44px_0px_#A1ADC917,0px_99px_59px_0px_#A1ADC90D,0px_176px_70px_0px_#A1ADC903,0px_275px_77px_0px_#A1ADC900]">
-                        <DropdownMenuItem className="group hover:bg-[#0154FC0D] items-start rounded-[16px] pt-[16px] pr-[16px] pb-[38px] pl-[16px]">
-                          <div className="grow-0 shrink-0 basis-[48px] h-[48px]"></div>
-                          <div>
-                            <Link
-                              href="/products/forexCRM"
-                              className="font-weight-[500] font-size[18px] text-align-left text-[#020f2c] group-hover:text-[#0154FC]"
+                      <DropdownMenuContent
+                        align="start"
+                        className="w-[520px] p-[32px] border-0 rounded-[24px] bg-[#ffffff] [box-shadow:0px_11px_24px_0px_#A1ADC91A,0px_44px_44px_0px_#A1ADC917,0px_99px_59px_0px_#A1ADC90D,0px_176px_70px_0px_#A1ADC903,0px_275px_77px_0px_#A1ADC900]"
+                      >
+                        {dropdownItems.map(({ link, title, desc, Icon }) => {
+                          return (
+                            <DropdownMenuItem
+                              key={title}
+                              className="group text-[#020f2c] hover:text-[#0154FC] hover:bg-[#0154FC0D] items-start flex gap-6 rounded-[16px] pt-4 px-4 pb-[38px]"
+                              onSelect={() => handleClick(link)}
                             >
-                              Forex CRM
-                            </Link>
-                          </div>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem className="group hover:bg-[#0154FC0D] items-start rounded-[16px] pt-[16px] pr-[16px] pb-[38px] pl-[16px]">
-                          <div className="grow-0 shrink-0 basis-[48px] h-[48px]"></div>
-                          <div>
-                            <Link
-                              href="/products/copyTrading"
-                              className="font-weight-[500] font-size[18px] text-align-left text-[#020f2c] group-hover:text-[#0154FC]"
-                            >
-                              Copytrading
-                            </Link>
-                          </div>
-                        </DropdownMenuItem>
-                        <DropdownMenuItem className="group hover:bg-[#0154FC0D] items-start rounded-[16px] pt-[16px] pr-[16px] pb-[38px] pl-[16px]">
-                          <div className="grow-0 shrink-0 basis-[48px] h-[48px]"></div>
-                          <div>
-                            <Link
-                              href="/products/pamm"
-                              className="font-weight-[500] font-size[18px] text-align-left text-[#020f2c] group-hover:text-[#0154FC]"
-                            >
-                              PAMM
-                            </Link>
-                          </div>
-                        </DropdownMenuItem>
+                              <div className="grow-0 shrink-0 mt-2">{Icon}</div>
+                              <div className="text-left group-hover:text-[#0154FC]">
+                                <div className="text-lg font-medium">
+                                  {title}
+                                </div>
+                                <div className="text-xs">{desc}</div>
+                              </div>
+                            </DropdownMenuItem>
+                          );
+                        })}
                       </DropdownMenuContent>
                     </DropdownMenu>
                   </div>
