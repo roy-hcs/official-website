@@ -48,7 +48,7 @@ export default function RrhHeader() {
   return (
     <>
       {/* pc */}
-      <div className="w-full lg:block hidden sticky top-0 left-0 z-[99] bg-[linear-gradient(90deg,#4DEEFF_0%,#0DD1FC_11%,#0154FC_27%,#050818_66%)]">
+      <div className="w-full lg:block hidden sticky top-0 left-0 z-[1] bg-[linear-gradient(90deg,#4DEEFF_0%,#0DD1FC_11%,#0154FC_27%,#050818_66%)]">
         <div className="w-full flex justify-center">
           <div className="flex-1 flex h-11 items-center justify-between max-w-320">
             <div className="text-[#fff] text-base font-normal">
@@ -78,7 +78,7 @@ export default function RrhHeader() {
         </div>
       </div>
       {/* mobile */}
-      <div className="lg:hidden block w-full py-[12px] px-[24px] sticky top-0 left-0 z-[99] bg-[linear-gradient(90deg,#4DEEFF_0%,#0DD1FC_11%,#0154FC_27%,#050818_66%)]">
+      <div className="lg:hidden block w-full py-[12px] px-[24px] sticky top-0 left-0 z-[1] bg-[linear-gradient(90deg,#4DEEFF_0%,#0DD1FC_11%,#0154FC_27%,#050818_66%)]">
         <div className="text-[#fff] text-sm font-normal">
           Multi-asset Fintech service platform
         </div>
@@ -102,7 +102,7 @@ export default function RrhHeader() {
         </div>
       </div>
       {/* pc */}
-      <div className="w-full lg:block hidden sticky top-[44px] left-0 z-[99]">
+      <div className="w-full lg:block hidden sticky top-[44px] left-0 z-[1]">
         <div className="w-full flex justify-center h-17 py-4 bg-white/60 backdrop-blur-[31.3px]">
           <div className="flex-1 flex items-center justify-between max-w-320">
             <div className="flex items-center gap-6">
@@ -178,7 +178,7 @@ export default function RrhHeader() {
         </div>
       </div>
       {/* mobile */}
-      <div className="lg:hidden block w-full sticky top-[76px] left-0 z-[99] py-[12px] px-[24px] bg-[#ffffff] text-right">
+      <div className="lg:hidden block w-full sticky top-[76px] left-0 z-[1] py-[12px] px-[24px] bg-[#ffffff] text-right">
         <DropdownMenu>
           <DropdownMenuTrigger>
             <RrhMenu />
