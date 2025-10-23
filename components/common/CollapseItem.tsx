@@ -40,11 +40,7 @@ export default function CollapseItem({
         className="flex justify-between items-center cursor-pointer py-6"
         onClick={toggle}
       >
-        <span
-          className={`text-[#020f2c] lg:text-sm text-xs font-[500] leading-[20px]${
-            isOpen ? '' : ''
-          }`}
-        >
+        <span className="text-[#020f2c] lg:text-sm text-xs font-[500] leading-[20px]">
           {title}
         </span>
         <span className="icon">
