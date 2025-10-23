@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   title: 'Haame - Multi-asset Fintech Service Platform',
   description:
     'Haame provides comprehensive multi-asset fintech services and solutions',
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/icon.png',
+    apple: '/apple-icon.png',
+  },
 };
 
 export default function RootLayout({
