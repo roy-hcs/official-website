@@ -1,44 +1,31 @@
 import { cn } from '@/lib/utils';
-import Image from 'next/image';
+import React from 'react';
 
 export const FeatureSection = ({
   title,
   description,
-  image,
-  link,
-  linkText,
+  dom,
   reverse = false,
 }: {
   title: string;
   description: string;
-  image?: string;
-  link?: string;
-  linkText?: string;
+  dom: React.ReactNode;
   reverse?: boolean;
 }) => {
   return (
-    <div className="w-full">
-      <div
-        className={cn(
-          'w-[1280px] px-6 flex gap-16 items-center m-auto',
-          reverse ? 'flex-row-reverse' : 'flex-row'
-        )}
-      >
-        <div className="basis-1/2 flex-1 bg-green-500 h-full">
-          {image && (
-            <Image src={image} alt={title} className="w-full h-auto " />
+    <div className="w-full h-[960px] relative">
+      <div className={cn('w-[1280px] m-auto h-full relative')}>
+        <div
+          className={cn(
+            'lg:w-[584px] absolute top-1/2 -translate-y-1/2',
+            reverse ? 'left-0' : 'right-0'
           )}
-        </div>
-        <div className="flex flex-col gap-8 basis-1/2 flex-1 outline">
+        >
           <h2 className="text-4xl font-bold text-[#0a0a0a]">{title}</h2>
-          <p className="text-[#737373] text-base">{description}</p>
-          {link && linkText && (
-            <a href={link} className="text-[#0a0a0a] text-base font-semibold">
-              {linkText}
-            </a>
-          )}
+          <p className="text-base text-[#737373] mt-[20px]">{description}</p>
         </div>
       </div>
+      {dom}
     </div>
   );
 };
