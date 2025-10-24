@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { RrhCommunication } from '@/components/icons/RrhCommunication';
-import { RrhChevronDown } from '@/components/icons/RrhChevronDown';
+// import { RrhChevronDown } from '@/components/icons/RrhChevronDown';
 import { RrhSocialMedia } from '@/components/icons/RrhSocialMedia';
 import { RrhMenu } from '@/components/icons/RrhMenu';
 import {
@@ -20,50 +20,55 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { CRMIcon } from '../icons/CRMIcon';
-import { PAMMIcon } from '../icons/PAMMIcon';
-import { CopyTradingIcon } from '../icons/CopyTradingIcon';
+// import { CRMIcon } from '../icons/CRMIcon';
+// import { PAMMIcon } from '../icons/PAMMIcon';
+// import { CopyTradingIcon } from '../icons/CopyTradingIcon';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { RrhClose } from '../icons/RrhClose';
 import SubmitInfo from '../common/SubmitInfo';
+// import { link } from 'fs';
 export default function RrhHeader() {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
   const [isOpenMobile, setIsOpenMobile] = useState(false);
   const navigate = useRouter();
-  const handleClick = (link: string) => {
-    navigate.push(link);
-    setIsOpen(false);
-  };
+  // const handleClick = (link: string) => {
+  //   navigate.push(link);
+  //   setIsOpen(false);
+  // };
   const handleClickMobile = (link: string) => {
     navigate.push(link);
     setIsOpenMobile(false);
   };
-  const dropdownItems = [
-    {
-      link: '/products/forex-CRM',
-      title: 'Forex CRM',
-      desc: 'Full-process AutomationMulti-asset Smart Operations Hub',
-      Icon: <CRMIcon className="size-8 group-hover:text-[#0154FC]" />,
-    },
-    {
-      link: '/products/pamm',
-      title: 'PAMM',
-      desc: 'Pooled Fund Management ·Proportional Profit Allocation · Share-based Investment Model',
-      Icon: <PAMMIcon className="size-8 group-hover:text-[#0154FC]" />,
-    },
-    {
-      link: '/products/copy-trading',
-      title: 'Copy Trading',
-      desc: 'Strategy Replication · Multi-mode CopyTrading ·Social Trading Risk Control',
-      Icon: <CopyTradingIcon className="size-8 group-hover:text-[#0154FC]" />,
-    },
-  ];
+  // const dropdownItems = [
+  //   {
+  //     link: '/products/forex-CRM',
+  //     title: 'Forex CRM',
+  //     desc: 'Full-process AutomationMulti-asset Smart Operations Hub',
+  //     Icon: <CRMIcon className="size-8 group-hover:text-[#0154FC]" />,
+  //   },
+  //   {
+  //     link: '/products/pamm',
+  //     title: 'PAMM',
+  //     desc: 'Pooled Fund Management ·Proportional Profit Allocation · Share-based Investment Model',
+  //     Icon: <PAMMIcon className="size-8 group-hover:text-[#0154FC]" />,
+  //   },
+  //   {
+  //     link: '/products/copy-trading',
+  //     title: 'Copy Trading',
+  //     desc: 'Strategy Replication · Multi-mode CopyTrading ·Social Trading Risk Control',
+  //     Icon: <CopyTradingIcon className="size-8 group-hover:text-[#0154FC]" />,
+  //   },
+  // ];
   const navItems = [
     { title: 'Insights', link: '' },
     { title: 'Events', link: '' },
+    { title: 'Home', link: '/' },
+    { title: 'Forex CRM', link: '/products/forex-CRM' },
+    { title: 'PAMM', link: '/products/pamm' },
+    { title: 'Copytrading', link: '/products/copy-trading' },
     { title: 'About', link: '/about-us' },
-    { title: 'Contact', link: '/contact-us' },
+    { title: 'Contact', link: '' },
   ];
   return (
     <>
@@ -138,7 +143,7 @@ export default function RrhHeader() {
 
               <div className="flex-1">
                 <div className="flex">
-                  <div className="px-4 py-2">
+                  {/* <div className="px-4 py-2">
                     <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
                       <DropdownMenuTrigger className="font-medium text-sm text-[#0a0a0a] focus:outline-none flex items-center group">
                         Products
@@ -167,7 +172,7 @@ export default function RrhHeader() {
                         })}
                       </DropdownMenuContent>
                     </DropdownMenu>
-                  </div>
+                  </div> */}
                   {navItems
                     .filter(item => item.link)
                     .map(({ title, link }) => {
@@ -208,16 +213,18 @@ export default function RrhHeader() {
             <RrhMenu />
           </DropdownMenuTrigger>
           <DropdownMenuContent>
-            {dropdownItems.map(({ link, title }) => {
-              return (
-                <DropdownMenuItem
-                  key={title}
-                  onSelect={() => handleClickMobile(link)}
-                >
-                  <div>{title}</div>
-                </DropdownMenuItem>
-              );
-            })}
+            {navItems
+              .filter(item => item.link)
+              .map(({ link, title }) => {
+                return (
+                  <DropdownMenuItem
+                    key={title}
+                    onSelect={() => handleClickMobile(link)}
+                  >
+                    <div>{title}</div>
+                  </DropdownMenuItem>
+                );
+              })}
           </DropdownMenuContent>
         </DropdownMenu>
       </div>

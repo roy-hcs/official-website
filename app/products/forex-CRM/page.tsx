@@ -63,8 +63,8 @@ export default function RrhForexCrmPage() {
     },
   ];
   return (
-    <div className="w-full h-full max-w-[1920px] mx-auto overflow-y-auto">
-      <div className="w-full h-[910px] relative">
+    <div className="w-full max-w-[1920px] mx-auto">
+      <div className="w-full md:h-[910px] relative">
         <div className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_here_section_bg.png')] bg-no-repeat bg-center bg-cover"></div>
         <div
           className="absolute -z-1 inset-0 lg:bg-[url('/assets/CRM/CRM_here_section_product.png')] bg-no-repeat bg-cover"
@@ -87,7 +87,7 @@ export default function RrhForexCrmPage() {
         title="Real-Time Data & Reporting"
         description="Comprehensive analytics for funds and trades. Real-time dashboards enable financial monitoring and data-driven operations. IBs gain clear insights into downline performance, rebates, and trading metrics."
         dom={
-          <div className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_section2_product.png')] bg-no-repeat lg:bg-[-134px_center] bg-[90px_top] lg:bg-cover bg-[length:300px_150px]"></div>
+          <div className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_section2_product.png')] bg-no-repeat lg:bg-position-[570_center] bg-[90px_top] lg:bg-cover bg-[length:300px_150px]"></div>
         }
       />
       <FeatureSection
