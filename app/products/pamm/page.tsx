@@ -1,13 +1,22 @@
 'use client';
 
+import SubmitInfo from '@/components/common/SubmitInfo';
 import { PAMMIconConnector } from '@/components/icons/PAMMIconConnector';
 import { PAMMIconFour } from '@/components/icons/PAMMIconFour';
 import { PAMMIconOne } from '@/components/icons/PAMMIconOne';
 import { PAMMIconThree } from '@/components/icons/PAMMIconThree';
 import { PAMMIconTwo } from '@/components/icons/PAMMIconTwo';
+import { RrhClose } from '@/components/icons/RrhClose';
 import { FAQSection } from '@/components/sections/FAQSection';
 import { USPItem, USPSection } from '@/components/sections/USPSection';
-import { Button } from '@/components/ui/button';
+import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogTrigger,
+  AlertDialogCancel,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from '@/components/ui/alert-dialog';
 import { Input } from '@/components/ui/input';
 
 function HeroSection() {
@@ -36,7 +45,7 @@ function HeroSection() {
       <div className="flex justify-center">
         <div className="md:pt-[192px] h-auto">
           <div className="lg:w-[672px] w-full">
-            <div className="text-[#020F2c] text-4xl md:text-[48px] font-bold text-center">
+            <div className="text-[#020F2c] text-4xl md:text-5xl font-bold text-center">
               PAMM Fund Management
             </div>
             <div className="mb-8 mt-6 text-[#737373] font-normal md:text-lg text-base leading-7 text-center">
@@ -51,12 +60,22 @@ function HeroSection() {
                 className="w-66.5 h-9 bg-white border border-[#E5E5E5] rounded-[8px] shadow-sm"
                 placeholder="Enter your Email"
               />
-              <Button
-                className="rounded-[8px] bg-[#171717] shadow-sm py-[8px] px-[16px] text-[#FAFAFA] lg:text-[14px] text-[12px] font-[500] leading-[20px]"
-                variant="outline"
-              >
-                Get A Demo
-              </Button>
+              <AlertDialog>
+                <AlertDialogTrigger className="rounded-[8px] bg-[#171717] shadow-sm py-[8px] px-[16px] text-[#FAFAFA] lg:text-[14px] text-[12px] font-[500] leading-[20px]">
+                  Get A Demo
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                  <AlertDialogCancel className="absolute top-4 right-4 h-8 w-8 rounded-full p-0 hover:bg-gray-100 border-0">
+                    <div className="w-[24px] h-[24px]">
+                      <RrhClose />
+                    </div>
+                  </AlertDialogCancel>
+                  <AlertDialogHeader>
+                    <AlertDialogTitle className="text-2xl font-semibold text-center"></AlertDialogTitle>
+                  </AlertDialogHeader>
+                  <SubmitInfo />
+                </AlertDialogContent>
+              </AlertDialog>
             </div>
           </div>
         </div>
@@ -118,7 +137,7 @@ export default function RrhPammPage() {
               Centralized Fund Management
             </h3>
             <div className="text-sm md:text-base text-[#737373]">
-              nvestors participate in the master account by purchasing fund
+              Investors participate in the master account by purchasing fund
               shares, eliminating the need for individual sub-accounts.
             </div>
             <div className="text-sm md:text-base text-[#737373]">
@@ -138,16 +157,14 @@ export default function RrhPammPage() {
         <div className="md:w-[1200px] relative h-full mx-auto flex flex-col md:flex-row items-center">
           <div className="basis-1/2 shrink-0 flex flex-col p-3 md:p-0 gap-3 md:gap-8 text-center">
             <h3 className="text-3xl md:text-4xl font-bold text-[#0a0a0a]">
-              Centralized Fund Management
+              Flexible Profit-Sharing & Commission Models
             </h3>
             <div className="text-sm md:text-base text-[#737373]">
-              nvestors participate in the master account by purchasing fund
-              shares, eliminating the need for individual sub-accounts.
-            </div>
-            <div className="text-sm md:text-base text-[#737373]">
-              All capital is centrally managed by professional fund managers,
-              ensuring efficient trading execution and risk-controlled asset
-              operations.
+              Supports a multi-tier profit distribution structure, creating a
+              transparent and sustainable income ecosystem. Fund managers, sales
+              agents, and the platform share performance-based profits,
+              commissions, and management fees — motivating all stakeholders for
+              active participation and long-term collaboration.
             </div>
           </div>
           <div className="basis-1/2 shrink-0"></div>
@@ -163,16 +180,11 @@ export default function RrhPammPage() {
           <div className="basis-1/2 shrink-0"></div>
           <div className="basis-1/2 shrink-0 flex flex-col p-3 md:p-0 gap-3 md:gap-8 text-center">
             <h3 className="text-3xl md:text-4xl font-bold text-[#0a0a0a]">
-              Centralized Fund Management
+              Data-Driven Transparency & Performance Monitoring
             </h3>
             <div className="text-sm md:text-base text-[#737373]">
-              nvestors participate in the master account by purchasing fund
+              Investors participate in the master account by purchasing fund
               shares, eliminating the need for individual sub-accounts.
-            </div>
-            <div className="text-sm md:text-base text-[#737373]">
-              All capital is centrally managed by professional fund managers,
-              ensuring efficient trading execution and risk-controlled asset
-              operations.
             </div>
             <div className="relative h-120 -my-15 w-full md:hidden">
               <div className="absolute inset-0 -z-1 bg-[url('/assets/PAMMSection4Product.png')] block md:hidden bg-position-[-30_-30] bg-no-repeat bg-[length:150%]"></div>

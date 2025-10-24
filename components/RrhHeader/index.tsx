@@ -29,14 +29,19 @@ import { RrhClose } from '../icons/RrhClose';
 import SubmitInfo from '../common/SubmitInfo';
 export default function RrhHeader() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isOpenMobile, setIsOpenMobile] = useState(false);
   const navigate = useRouter();
   const handleClick = (link: string) => {
     navigate.push(link);
     setIsOpen(false);
   };
+  const handleClickMobile = (link: string) => {
+    navigate.push(link);
+    setIsOpenMobile(false);
+  };
   const dropdownItems = [
     {
-      link: '/products/forexCRM',
+      link: '/products/forex-CRM',
       title: 'Forex CRM',
       desc: 'Full-process AutomationMulti-asset Smart Operations Hub',
       Icon: <CRMIcon className="size-8 group-hover:text-[#0154FC]" />,
@@ -48,11 +53,17 @@ export default function RrhHeader() {
       Icon: <PAMMIcon className="size-8 group-hover:text-[#0154FC]" />,
     },
     {
-      link: '/products/copyTrading',
+      link: '/products/copy-trading',
       title: 'Copy Trading',
       desc: 'Strategy Replication · Multi-mode CopyTrading ·Social Trading Risk Control',
       Icon: <CopyTradingIcon className="size-8 group-hover:text-[#0154FC]" />,
     },
+  ];
+  const navItems = [
+    { title: 'Insights', link: '' },
+    { title: 'Events', link: '' },
+    { title: 'About', link: '/about-us' },
+    { title: 'Contact', link: '/contact-us' },
   ];
   return (
     <>
@@ -141,7 +152,7 @@ export default function RrhHeader() {
                           return (
                             <DropdownMenuItem
                               key={title}
-                              className="group text-[#020f2c] hover:text-[#0154FC] hover:bg-[#0154FC0D] items-start flex gap-6 rounded-[16px] pt-4 px-4 pb-[38px]"
+                              className="group text-[#020f2c] cursor-pointer hover:text-[#0154FC] hover:bg-[#0154FC0D] items-start flex gap-6 rounded-[16px] pt-4 px-4 pb-[38px]"
                               onSelect={() => handleClick(link)}
                             >
                               <div className="grow-0 shrink-0 mt-2">{Icon}</div>
@@ -157,26 +168,17 @@ export default function RrhHeader() {
                       </DropdownMenuContent>
                     </DropdownMenu>
                   </div>
-                  <div className="px-4 py-2">
-                    <div className="font-medium text-sm text-[#0a0a0a]">
-                      Insights
-                    </div>
-                  </div>
-                  <div className="px-4 py-2">
-                    <div className="font-medium text-sm text-[#0a0a0a]">
-                      Events
-                    </div>
-                  </div>
-                  <div className="px-4 py-2">
-                    <div className="font-medium text-sm text-[#0a0a0a]">
-                      About
-                    </div>
-                  </div>
-                  <div className="px-4 py-2">
-                    <div className="font-medium text-sm text-[#0a0a0a]">
-                      Contact
-                    </div>
-                  </div>
+                  {navItems
+                    .filter(item => item.link)
+                    .map(({ title, link }) => {
+                      return (
+                        <Link key={title} href={link} className="px-4 py-2">
+                          <div className="font-medium text-sm text-[#0a0a0a]">
+                            {title}
+                          </div>
+                        </Link>
+                      );
+                    })}
                 </div>
               </div>
             </div>
@@ -201,20 +203,21 @@ export default function RrhHeader() {
       </div>
       {/* mobile */}
       <div className="lg:hidden block w-full sticky top-[76px] left-0 z-[1] py-[12px] px-[24px] bg-[#ffffff] text-right">
-        <DropdownMenu>
+        <DropdownMenu open={isOpenMobile} onOpenChange={setIsOpenMobile}>
           <DropdownMenuTrigger>
             <RrhMenu />
           </DropdownMenuTrigger>
           <DropdownMenuContent>
-            <DropdownMenuItem>
-              <Link href="/products/forexCRM">Forex CRM</Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Link href="/products/copyTrading">Copytrading</Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Link href="/products/pamm">PAMM</Link>
-            </DropdownMenuItem>
+            {dropdownItems.map(({ link, title }) => {
+              return (
+                <DropdownMenuItem
+                  key={title}
+                  onSelect={() => handleClickMobile(link)}
+                >
+                  <div>{title}</div>
+                </DropdownMenuItem>
+              );
+            })}
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
