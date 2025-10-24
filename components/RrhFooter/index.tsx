@@ -61,9 +61,9 @@ const SocialMediaIcons = ({ cls }: { cls?: string }) => {
 };
 export default function RrhFooter() {
   const productsInfo = [
-    { title: 'Forex CRM', link: '/products/forexCRM' },
+    { title: 'Forex CRM', link: '/products/forex-CRM' },
     { title: 'PAMM', link: '/products/pamm' },
-    { title: 'Copytrading', link: '/products/copyTrading' },
+    { title: 'Copytrading', link: '/products/copy-trading' },
   ];
   const companyInfo = [
     { title: 'About US', link: '/about-us' },
