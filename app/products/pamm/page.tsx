@@ -31,7 +31,7 @@ function HeroSection() {
     },
   ];
   return (
-    <div className="w-full h-[910px] relative">
+    <div className="w-full md:h-[910px] relative">
       <div className="absolute inset-0 -z-1 before:absolute before:inset-0 before:bg-[url('/assets/PAMMHeroSectionGridBg.png'),url('/assets/PAMMHeroSectionProduct.png')] hidden md:block before:bg-no-repeat before:bg-[center_0] before:bg-contain"></div>
       <div className="flex justify-center">
         <div className="md:pt-[192px] h-auto">
@@ -63,11 +63,6 @@ function HeroSection() {
       </div>
 
       <USPSection USPs={USPs} connector={<PAMMIconConnector />} />
-      {/* <div className="lg:block hidden absolute bottom-0 left-1/2 -translate-x-1/2 w-[1228px] h-[607px] bg-[url('/assets/首图产品展示.png')] bg-no-repeat bg-center bg-cover"></div> */}
-      <div className="relative w-full lg:hidden block">
-        <div className="pt-[calc(607/1228*100%)]" />
-        <div className="absolute inset-0 bg-[url('/assets/首图产品展示.png')] bg-no-repeat bg-center bg-cover"></div>
-      </div>
     </div>
   );
 }
@@ -114,22 +109,73 @@ export default function RrhPammPage() {
   return (
     <div className="w-full h-full overflow-y-auto">
       <HeroSection />
-      <div className="aspect-[2/1] w-full relative py-23">
-        <div className="absolute inset-0 -z-1 before:absolute before:inset-0 before:bg-[url('/assets/PAMMSection2Product.png')] hidden md:block before:bg-no-repeat before:bg-[0_0] before:bg-contain"></div>
-        <div className="md:w-[1200px] h-full mx-auto flex flex-col md:flex-row items-center">
-          <div className="basis-1/2 shrink-0"></div>
-          <div className="basis-1/2 shrink-0 flex flex-col gap-8">
-            <h3 className="text-4xl font-bold text-[#0a0a0a]">
+      <div className="md:aspect-[2/1] w-full relative md:py-23">
+        <div className="absolute inset-x-0 -inset-y-[120px] -z-1 inset-0 bg-[url('/assets/PAMMSection2Product.png')] hidden md:block bg-position-[20px_0] bg-no-repeat bg-contain"></div>
+        <div className="md:w-[1200px] relative h-full mx-auto flex flex-col md:flex-row items-center">
+          <div className="relative basis-1/2 shrink-0"></div>
+          <div className="basis-1/2 shrink-0 flex flex-col p-3 md:p-0 gap-3 md:gap-8 text-center">
+            <h3 className="text-3xl md:text-4xl font-bold text-[#0a0a0a]">
               Centralized Fund Management
             </h3>
-            <div className="text-base text-[#737373]">
+            <div className="text-sm md:text-base text-[#737373]">
               nvestors participate in the master account by purchasing fund
               shares, eliminating the need for individual sub-accounts.
             </div>
-            <div className="text-base text-[#737373]">
+            <div className="text-sm md:text-base text-[#737373]">
               All capital is centrally managed by professional fund managers,
               ensuring efficient trading execution and risk-controlled asset
               operations.
+            </div>
+            <div className="relative h-120 -my-15 w-full md:hidden">
+              <div className="absolute inset-0 -z-1 bg-[url('/assets/PAMMSection2Product.png')] block md:hidden bg-position-[-50_-30] bg-no-repeat bg-[length:150%]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="md:aspect-[2/1] w-full relative md:py-23">
+        <div className="absolute inset-x-0 -inset-y-[120px] -z-1 inset-0 bg-[url('/assets/PAMMSection3Product.png')] hidden md:block bg-position-[100%_0] bg-no-repeat bg-contain"></div>
+
+        <div className="md:w-[1200px] relative h-full mx-auto flex flex-col md:flex-row items-center">
+          <div className="basis-1/2 shrink-0 flex flex-col p-3 md:p-0 gap-3 md:gap-8 text-center">
+            <h3 className="text-3xl md:text-4xl font-bold text-[#0a0a0a]">
+              Centralized Fund Management
+            </h3>
+            <div className="text-sm md:text-base text-[#737373]">
+              nvestors participate in the master account by purchasing fund
+              shares, eliminating the need for individual sub-accounts.
+            </div>
+            <div className="text-sm md:text-base text-[#737373]">
+              All capital is centrally managed by professional fund managers,
+              ensuring efficient trading execution and risk-controlled asset
+              operations.
+            </div>
+          </div>
+          <div className="basis-1/2 shrink-0"></div>
+          <div className="relative h-120 -my-15 w-full md:hidden">
+            <div className="absolute inset-0 -z-1 bg-[url('/assets/PAMMSection3Product.png')] block md:hidden bg-position-[-120_-100] bg-no-repeat bg-[length:150%]"></div>
+          </div>
+        </div>
+      </div>
+      <div className="md:aspect-[2/1] w-full relative md:py-23">
+        <div className="absolute inset-x-0 -inset-y-[120px] -z-1 inset-0 bg-[url('/assets/PAMMSection4Product.png')] hidden md:block bg-position-[100px_0] bg-no-repeat bg-contain"></div>
+
+        <div className="md:w-[1200px] relative h-full mx-auto flex flex-col md:flex-row items-center">
+          <div className="basis-1/2 shrink-0"></div>
+          <div className="basis-1/2 shrink-0 flex flex-col p-3 md:p-0 gap-3 md:gap-8 text-center">
+            <h3 className="text-3xl md:text-4xl font-bold text-[#0a0a0a]">
+              Centralized Fund Management
+            </h3>
+            <div className="text-sm md:text-base text-[#737373]">
+              nvestors participate in the master account by purchasing fund
+              shares, eliminating the need for individual sub-accounts.
+            </div>
+            <div className="text-sm md:text-base text-[#737373]">
+              All capital is centrally managed by professional fund managers,
+              ensuring efficient trading execution and risk-controlled asset
+              operations.
+            </div>
+            <div className="relative h-120 -my-15 w-full md:hidden">
+              <div className="absolute inset-0 -z-1 bg-[url('/assets/PAMMSection4Product.png')] block md:hidden bg-position-[-30_-30] bg-no-repeat bg-[length:150%]"></div>
             </div>
           </div>
         </div>

@@ -30,29 +30,36 @@ export default function RrhForexCrmPage() {
   ];
   const questions = [
     {
-      question: 'How does PAMM fundamentally operate?',
+      question: 'What is a CRM system? How can it help my brokerage business?',
       answer:
-        'By adding your manager account to the CRM, you grant read and write permissions, enabling the CRM to dynamically sync trading accounts and tickets from the trading platform, and subsequently construct multi-dimensional models and create a systematic and visual management module.',
+        'Our CRM system is a secure and intuitive platform for managing customer accounts, deposits, withdrawals, and interactions with the broker. The system offers real-time data analysis and seamless integration with the trading platform, effectively enhancing customer retention and operational efficiency.',
     },
     {
-      question: 'How does PAMM fundamentally operate?',
+      question: 'How can I import existing customer data into the CRM system?',
       answer:
-        'By adding your manager account to the CRM, you grant read and write permissions, enabling the CRM to dynamically sync trading accounts and tickets from the trading platform, and subsequently construct multi-dimensional models and create a systematic and visual management module.',
+        'Simply provide a data file in the standard format, and our technical team will ensure that the data is securely and completely imported into the system without interrupting your business, enabling a seamless migration.',
     },
     {
-      question: 'How does PAMM fundamentally operate?',
+      question: 'Does CRM support mobile access?',
       answer:
-        'By adding your manager account to the CRM, you grant read and write permissions, enabling the CRM to dynamically sync trading accounts and tickets from the trading platform, and subsequently construct multi-dimensional models and create a systematic and visual management module.',
+        'Yes! Our CRM utilizes Progressive Web Application (PWA) technology, which can be installed via a browser and offers a smooth experience akin to a native app. It is compatible with iOS, Android, and desktop devices, allowing customers to manage their accounts anytime and anywhere.',
     },
     {
-      question: 'How does PAMM fundamentally operate?',
+      question: 'What if I have customized feature requirements?',
       answer:
-        'By adding your manager account to the CRM, you grant read and write permissions, enabling the CRM to dynamically sync trading accounts and tickets from the trading platform, and subsequently construct multi-dimensional models and create a systematic and visual management module.',
+        'Haame adheres to the "customer success" philosophy and respects the professional needs of each broker. Our technical team will collaborate with you to customize exclusive features within a reasonable scope after careful evaluation, in order to meet your business goals.',
     },
     {
-      question: 'How does PAMM fundamentally operate?',
+      question:
+        'What features can I use to attract customers to trade and agents to grow my business?',
       answer:
-        'By adding your manager account to the CRM, you grant read and write permissions, enabling the CRM to dynamically sync trading accounts and tickets from the trading platform, and subsequently construct multi-dimensional models and create a systematic and visual management module.',
+        'The system supports various commission models, including trading commissions, fee commissions, and deposit commissions. You can also set up special incentive mechanisms such as deposit rewards, trading rewards, and account opening rewards. Additionally, the points mall feature allows for rewarding points based on trading and deposit scenarios, which customers can redeem for goods, helping to attract customers and agents to expand your business.',
+    },
+    {
+      question:
+        'I have customers on both MT4 and MT5 platforms. Do I need to set up separate commission rules for each platform?',
+      answer:
+        'No. Our CRM system supports linking a single commission rule to multiple platforms (such as MT4 and MT5), simplifying the configuration process and enhancing your operational efficiency.',
     },
   ];
   return (
