@@ -59,7 +59,7 @@ const HeroBanner = () => {
           </div>
         </div>
       </div>
-      <div className="block md:absolute -bottom-40 mx-0 md:-mx-6 inset-x-0">
+      <div className="block md:absolute -bottom-40 inset-x-0">
         <div className="md:w-[1280px] mx-auto">
           <div className="flex flex-col md:flex-row gap-3 md:justify-between h-[248px] ">
             {characteristics.map(item => {
@@ -122,33 +122,33 @@ const DevelopmentHistory = () => {
     </div>
   );
 };
-const LocationBanner = () => {
-  const images = [
-    '/assets/AboutUsSection4Product1.png',
-    '/assets/AboutUsSection4Product2.png',
-    '/assets/AboutUsSection4Product3.png',
-    '/assets/AboutUsSection4Product4.png',
-  ];
-  return (
-    <div className="w-full md:w-[1200px] mx-auto flex flex-col items-center justify-center pt-10 px-3 md:px-0 md:pt-[150px] text-[#020f2c] md:text-xl">
-      <h3 className="text-2xl md:text-[48px] font-semibold capitalize mb-6">
-        development of globalization
-      </h3>
-      <div className="mb-5 md:mb-25">
-        Our headquarters and R&D centers in various regions
-      </div>
-      <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6">
-        {images.map(src => {
-          return (
-            <div key={src} className="w-full aspect-[0.5] md:h-150 relative">
-              <Image src={src} alt="product" fill />
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
-};
+// const LocationBanner = () => {
+//   const images = [
+//     '/assets/AboutUsSection4Product1.png',
+//     '/assets/AboutUsSection4Product2.png',
+//     '/assets/AboutUsSection4Product3.png',
+//     '/assets/AboutUsSection4Product4.png',
+//   ];
+//   return (
+//     <div className="w-full md:w-[1200px] mx-auto flex flex-col items-center justify-center pt-10 px-3 md:px-0 md:pt-[150px] text-[#020f2c] md:text-xl">
+//       <h3 className="text-2xl md:text-[48px] font-semibold capitalize mb-6">
+//         development of globalization
+//       </h3>
+//       <div className="mb-5 md:mb-25">
+//         Our headquarters and R&D centers in various regions
+//       </div>
+//       <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6">
+//         {images.map(src => {
+//           return (
+//             <div key={src} className="w-full aspect-[0.5] md:h-150 relative">
+//               <Image src={src} alt="product" fill />
+//             </div>
+//           );
+//         })}
+//       </div>
+//     </div>
+//   );
+// };
 
 const CultureBanner = () => {
   const USPs: USPItem[] = [
@@ -195,7 +195,7 @@ export default function AboutUsPage() {
       <HeroBanner />
       <InvestBanner />
       <DevelopmentHistory />
-      <LocationBanner />
+      {/* <LocationBanner /> */}
       <CultureBanner />
     </div>
   );

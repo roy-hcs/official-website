@@ -43,7 +43,7 @@ export default function RrhHeader() {
   // const dropdownItems = [
   //   {
   //     link: '/products/forex-CRM',
-  //     title: 'Forex CRM',
+  //     title: 'CRM',
   //     desc: 'Full-process AutomationMulti-asset Smart Operations Hub',
   //     Icon: <CRMIcon className="size-8 group-hover:text-[#0154FC]" />,
   //   },
@@ -64,7 +64,7 @@ export default function RrhHeader() {
     { title: 'Insights', link: '' },
     { title: 'Events', link: '' },
     { title: 'Home', link: '/' },
-    { title: 'Forex CRM', link: '/products/forex-CRM' },
+    { title: 'CRM', link: '/products/forex-CRM' },
     { title: 'PAMM', link: '/products/pamm' },
     { title: 'Copytrading', link: '/products/copy-trading' },
     { title: 'About', link: '/about-us' },

@@ -41,7 +41,7 @@ function HeroSection() {
   ];
   return (
     <div className="w-full md:h-[910px] relative">
-      <div className="absolute inset-0 -z-1 before:absolute before:inset-0 before:bg-[url('/assets/PAMMHeroSectionGridBg.png'),url('/assets/PAMMHeroSectionProduct.png')] hidden md:block before:bg-no-repeat before:bg-[center_0] before:bg-contain"></div>
+      <div className="absolute inset-0 -z-1 before:absolute before:inset-0 before:bg-[url('/assets/PAMMHeroSectionGridBg.png'),url('/assets/PAMMHeroSectionProduct.png')] hidden md:block before:bg-no-repeat before:bg-position-[0_0] before:bg-[length:100%]"></div>
       <div className="flex justify-center">
         <div className="md:pt-[192px] h-auto">
           <div className="lg:w-[672px] w-full">
@@ -132,7 +132,7 @@ export default function RrhPammPage() {
         <div className="absolute inset-x-0 -inset-y-[120px] -z-1 inset-0 bg-[url('/assets/PAMMSection2Product.png')] hidden md:block bg-position-[20px_0] bg-no-repeat bg-contain"></div>
         <div className="md:w-[1200px] relative h-full mx-auto flex flex-col md:flex-row items-center">
           <div className="relative basis-1/2 shrink-0"></div>
-          <div className="basis-1/2 shrink-0 flex flex-col p-3 md:p-0 gap-3 md:gap-8 text-center">
+          <div className="basis-1/2 shrink-0 flex flex-col p-3 md:p-0 gap-3 md:gap-8 md:text-left text-center">
             <h3 className="text-3xl md:text-4xl font-bold text-[#0a0a0a]">
               Centralized Fund Management
             </h3>
@@ -155,7 +155,7 @@ export default function RrhPammPage() {
         <div className="absolute inset-x-0 -inset-y-[120px] -z-1 inset-0 bg-[url('/assets/PAMMSection3Product.png')] hidden md:block bg-position-[100%_0] bg-no-repeat bg-contain"></div>
 
         <div className="md:w-[1200px] relative h-full mx-auto flex flex-col md:flex-row items-center">
-          <div className="basis-1/2 shrink-0 flex flex-col p-3 md:p-0 gap-3 md:gap-8 text-center">
+          <div className="basis-1/2 shrink-0 flex flex-col p-3 md:p-0 gap-3 md:gap-8 md:text-left text-center">
             <h3 className="text-3xl md:text-4xl font-bold text-[#0a0a0a]">
               Flexible Profit-Sharing & Commission Models
             </h3>
@@ -178,7 +178,7 @@ export default function RrhPammPage() {
 
         <div className="md:w-[1200px] relative h-full mx-auto flex flex-col md:flex-row items-center">
           <div className="basis-1/2 shrink-0"></div>
-          <div className="basis-1/2 shrink-0 flex flex-col p-3 md:p-0 gap-3 md:gap-8 text-center">
+          <div className="basis-1/2 shrink-0 flex flex-col p-3 md:p-0 gap-3 md:gap-8 md:text-left text-center">
             <h3 className="text-3xl md:text-4xl font-bold text-[#0a0a0a]">
               Data-Driven Transparency & Performance Monitoring
             </h3>

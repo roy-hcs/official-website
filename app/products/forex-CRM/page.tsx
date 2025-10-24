@@ -64,7 +64,7 @@ export default function RrhForexCrmPage() {
   ];
   return (
     <div className="w-full max-w-[1920px] mx-auto">
-      <div className="w-full md:h-[910px] relative">
+      <div className="w-full mb-10 md:mb-0 md:h-[910px] relative">
         <div className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_here_section_bg.png')] bg-no-repeat bg-center bg-cover"></div>
         <div
           className="absolute -z-1 inset-0 lg:bg-[url('/assets/CRM/CRM_here_section_product.png')] bg-no-repeat bg-cover"
@@ -86,31 +86,43 @@ export default function RrhForexCrmPage() {
       <FeatureSection
         title="Real-Time Data & Reporting"
         description="Comprehensive analytics for funds and trades. Real-time dashboards enable financial monitoring and data-driven operations. IBs gain clear insights into downline performance, rebates, and trading metrics."
-        dom={
-          <div className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_section2_product.png')] bg-no-repeat lg:bg-position-[570_center] bg-[90px_top] lg:bg-cover bg-[length:300px_150px]"></div>
+        PcImg={
+          <div className="absolute -z-1 inset-x-0 -inset-y-10 bg-[url('/assets/CRM/CRM_section2_product.png')] bg-no-repeat hidden lg:block lg:bg-position-[-200_center] lg:bg-cover"></div>
+        }
+        MobileImg={
+          <div className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_section2_product.png')] bg-no-repeat block lg:hidden bg-position-[-100_50] bg-[length:200%]"></div>
         }
       />
       <FeatureSection
         title="Full-Cycle Client Management"
         description="Covers the entire client journey — from registration, KYC, deposit, trading to reinvestment. Empower your sales and IB teams with flexible segmentation and tagging to enhance retention and conversion."
         reverse={true}
-        dom={
-          <div className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_section3_product.png')] bg-no-repeat lg:bg-[274px_center] bg-[30px_top] lg:bg-cover bg-[length:300px_150px]"></div>
+        PcImg={
+          <div className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_section3_product.png')] hidden lg:block bg-no-repeat lg:bg-position-[274px_center] lg:bg-cover"></div>
+        }
+        MobileImg={
+          <div className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_section3_product.png')] block lg:hidden bg-no-repeat bg-position-[-250_50] bg-[length:200%]"></div>
         }
       />
       <FeatureSection
-        title="Leading CRM for Brokerages & Exchanges"
-        description="Create your own profit-sharing system — # Forex CRM # PAMM # CopyTrading"
-        dom={
-          <div className="absolute -z-1 inset-0  bg-[url('/assets/CRM/CRM_section4_product.png')] bg-no-repeat lg:bg-[-134px_center] bg-[90px_top] lg:bg-cover bg-[length:300px_150px]"></div>
+        title="Powerful Multi-Tier Rebate"
+        description="Define custom rebate tiers with adjustable parameters. Supports various rebate types - trade volume, fees, deposits, and cross-level rewards. Multi-layer dynamic rebate models motivate IBs and expand your client network rapidly"
+        PcImg={
+          <div className="absolute -z-1 inset-0  bg-[url('/assets/CRM/CRM_section4_product.png')] hidden md:block bg-no-repeat lg:bg-[-134px_center] lg:bg-cover"></div>
+        }
+        MobileImg={
+          <div className="absolute -z-1 inset-0  bg-[url('/assets/CRM/CRM_section4_product.png')] block md:hidden bg-no-repeat bg-position-[-120_50] bg-[length:200%]"></div>
         }
       />
       <FeatureSection
-        title="Leading CRM for Brokerages & Exchanges"
-        description="Create your own profit-sharing system — # Forex CRM # PAMM # CopyTrading"
+        title="Deep Integration with Trading Systems"
+        description="Seamlessly integrates with MT4, MT5, XOH, XForce, Sirix, and more. Real-time synchronization of accounts, balances, positions, and orders ensures a fully unified client and trading system experience."
         reverse={true}
-        dom={
-          <div className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_section5_product.png')] bg-no-repeat lg:bg-[274px_center] bg-[55px_top] lg:bg-cover bg-[length:300px_150px]"></div>
+        PcImg={
+          <div className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_section5_product.png')] hidden md:block bg-no-repeat lg:bg-[274px_center] lg:bg-cover"></div>
+        }
+        MobileImg={
+          <div className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_section5_product.png')] block md:hidden bg-no-repeat bg-position-[-200_50] bg-[length:200%]"></div>
         }
       />
       <div className="lg:h-[960px] h-auto lg:pt-[136px] py-[24px]">
