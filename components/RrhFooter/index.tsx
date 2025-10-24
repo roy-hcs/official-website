@@ -66,13 +66,13 @@ export default function RrhFooter() {
     { title: 'Copytrading', link: '/products/copyTrading' },
   ];
   const companyInfo = [
-    { title: 'About US', link: '/aboutUs' },
-    { title: 'Contact US', link: '/contactUs' },
+    { title: 'About US', link: '/about-us' },
+    { title: 'Contact US', link: '/contact-us' },
   ];
   const StatementInfo = [
-    { title: 'Privacy Policy', link: '' },
-    { title: 'Terms of Service', link: '' },
-    { title: 'Cookies Settings', link: '' },
+    { title: 'Privacy Policy', link: '/privacy-policy' },
+    { title: 'Terms of Service', link: '/terms-of-service' },
+    { title: 'Cookies Settings', link: '/cookies-settings' },
   ];
 
   return (

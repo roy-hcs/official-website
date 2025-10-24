@@ -45,6 +45,12 @@ export default function RrhHeader() {
       Icon: <CopyTradingIcon className="size-8 group-hover:text-[#0154FC]" />,
     },
   ];
+  const navItems = [
+    { title: 'Insights', link: '' },
+    { title: 'Events', link: '' },
+    { title: 'About', link: '/about-us' },
+    { title: 'Contact', link: '/contact-us' },
+  ];
   return (
     <>
       {/* pc */}
@@ -132,7 +138,7 @@ export default function RrhHeader() {
                           return (
                             <DropdownMenuItem
                               key={title}
-                              className="group text-[#020f2c] hover:text-[#0154FC] hover:bg-[#0154FC0D] items-start flex gap-6 rounded-[16px] pt-4 px-4 pb-[38px]"
+                              className="group text-[#020f2c] cursor-pointer hover:text-[#0154FC] hover:bg-[#0154FC0D] items-start flex gap-6 rounded-[16px] pt-4 px-4 pb-[38px]"
                               onSelect={() => handleClick(link)}
                             >
                               <div className="grow-0 shrink-0 mt-2">{Icon}</div>
@@ -148,26 +154,17 @@ export default function RrhHeader() {
                       </DropdownMenuContent>
                     </DropdownMenu>
                   </div>
-                  <div className="px-4 py-2">
-                    <div className="font-medium text-sm text-[#0a0a0a]">
-                      Insights
-                    </div>
-                  </div>
-                  <div className="px-4 py-2">
-                    <div className="font-medium text-sm text-[#0a0a0a]">
-                      Events
-                    </div>
-                  </div>
-                  <div className="px-4 py-2">
-                    <div className="font-medium text-sm text-[#0a0a0a]">
-                      About
-                    </div>
-                  </div>
-                  <div className="px-4 py-2">
-                    <div className="font-medium text-sm text-[#0a0a0a]">
-                      Contact
-                    </div>
-                  </div>
+                  {navItems
+                    .filter(item => item.link)
+                    .map(({ title, link }) => {
+                      return (
+                        <Link key={title} href={link} className="px-4 py-2">
+                          <div className="font-medium text-sm text-[#0a0a0a]">
+                            {title}
+                          </div>
+                        </Link>
+                      );
+                    })}
                 </div>
               </div>
             </div>

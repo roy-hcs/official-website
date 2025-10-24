@@ -118,7 +118,7 @@ export default function RrhPammPage() {
               Centralized Fund Management
             </h3>
             <div className="text-sm md:text-base text-[#737373]">
-              nvestors participate in the master account by purchasing fund
+              Investors participate in the master account by purchasing fund
               shares, eliminating the need for individual sub-accounts.
             </div>
             <div className="text-sm md:text-base text-[#737373]">
@@ -141,7 +141,7 @@ export default function RrhPammPage() {
               Centralized Fund Management
             </h3>
             <div className="text-sm md:text-base text-[#737373]">
-              nvestors participate in the master account by purchasing fund
+              Investors participate in the master account by purchasing fund
               shares, eliminating the need for individual sub-accounts.
             </div>
             <div className="text-sm md:text-base text-[#737373]">
@@ -166,7 +166,7 @@ export default function RrhPammPage() {
               Centralized Fund Management
             </h3>
             <div className="text-sm md:text-base text-[#737373]">
-              nvestors participate in the master account by purchasing fund
+              Investors participate in the master account by purchasing fund
               shares, eliminating the need for individual sub-accounts.
             </div>
             <div className="text-sm md:text-base text-[#737373]">
