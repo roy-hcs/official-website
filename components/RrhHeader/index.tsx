@@ -5,7 +5,14 @@ import { RrhCommunication } from '@/components/icons/RrhCommunication';
 import { RrhChevronDown } from '@/components/icons/RrhChevronDown';
 import { RrhSocialMedia } from '@/components/icons/RrhSocialMedia';
 import { RrhMenu } from '@/components/icons/RrhMenu';
-
+import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogTrigger,
+  AlertDialogCancel,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from '@/components/ui/alert-dialog';
 import Image from 'next/image';
 import {
   DropdownMenu,
@@ -18,6 +25,8 @@ import { PAMMIcon } from '../icons/PAMMIcon';
 import { CopyTradingIcon } from '../icons/CopyTradingIcon';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { RrhClose } from '../icons/RrhClose';
+import SubmitInfo from '../common/SubmitInfo';
 export default function RrhHeader() {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useRouter();
@@ -168,9 +177,22 @@ export default function RrhHeader() {
                 </div>
               </div>
             </div>
-            <div className="py-2 px-4 rounded-md border border-[#E5E5E5] text-sm font-medium leading-5">
-              Get A Demo
-            </div>
+            <AlertDialog>
+              <AlertDialogTrigger className="py-2 px-4 rounded-md border border-[#E5E5E5] text-sm font-medium leading-5">
+                Get A Demo
+              </AlertDialogTrigger>
+              <AlertDialogContent>
+                <AlertDialogCancel className="absolute top-4 right-4 h-8 w-8 rounded-full p-0 hover:bg-gray-100 border-0">
+                  <div className="w-[24px] h-[24px]">
+                    <RrhClose />
+                  </div>
+                </AlertDialogCancel>
+                <AlertDialogHeader>
+                  <AlertDialogTitle className="text-2xl font-semibold text-center"></AlertDialogTitle>
+                </AlertDialogHeader>
+                <SubmitInfo />
+              </AlertDialogContent>
+            </AlertDialog>
           </div>
         </div>
       </div>

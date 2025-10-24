@@ -67,18 +67,19 @@ export default function RrhForexCrmPage() {
       <div className="w-full h-[910px] relative">
         <div className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_here_section_bg.png')] bg-no-repeat bg-center bg-cover"></div>
         <div
-          className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_here_section_product.png')] bg-no-repeat bg-cover"
+          className="absolute -z-1 inset-0 lg:bg-[url('/assets/CRM/CRM_here_section_product.png')] bg-no-repeat bg-cover"
           style={{
             backgroundPositionX: '155px',
+            backgroundPositionY: '-104px',
           }}
         ></div>
-        <div className="pt-[208px]">
+        <div className="lg:pt-[208px] pt-[104px]">
           <HeroBanner
             title="Leading CRM for Brokerages & Exchanges"
             description="Create your own profit-sharing system — # Forex CRM # PAMM # CopyTrading"
           />
         </div>
-        <div className="pt-[176px]">
+        <div className="lg:pt-[176px] pt-[88px]">
           <USPSection USPs={USPs} />
         </div>
       </div>
@@ -86,12 +87,7 @@ export default function RrhForexCrmPage() {
         title="Real-Time Data & Reporting"
         description="Comprehensive analytics for funds and trades. Real-time dashboards enable financial monitoring and data-driven operations. IBs gain clear insights into downline performance, rebates, and trading metrics."
         dom={
-          <div
-            className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_section2_product.png')] bg-no-repeat bg-cover"
-            style={{
-              backgroundPositionX: '-134px',
-            }}
-          ></div>
+          <div className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_section2_product.png')] bg-no-repeat lg:bg-[-134px_center] bg-[90px_top] lg:bg-cover bg-[length:300px_150px]"></div>
         }
       />
       <FeatureSection
@@ -99,24 +95,14 @@ export default function RrhForexCrmPage() {
         description="Covers the entire client journey — from registration, KYC, deposit, trading to reinvestment. Empower your sales and IB teams with flexible segmentation and tagging to enhance retention and conversion."
         reverse={true}
         dom={
-          <div
-            className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_section3_product.png')] bg-no-repeat bg-cover"
-            style={{
-              backgroundPositionX: '274px',
-            }}
-          ></div>
+          <div className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_section3_product.png')] bg-no-repeat lg:bg-[274px_center] bg-[30px_top] lg:bg-cover bg-[length:300px_150px]"></div>
         }
       />
       <FeatureSection
         title="Leading CRM for Brokerages & Exchanges"
         description="Create your own profit-sharing system — # Forex CRM # PAMM # CopyTrading"
         dom={
-          <div
-            className="absolute -z-1 inset-0  bg-[url('/assets/CRM/CRM_section4_product.png')] bg-no-repeat bg-cover"
-            style={{
-              backgroundPositionX: '-134px',
-            }}
-          ></div>
+          <div className="absolute -z-1 inset-0  bg-[url('/assets/CRM/CRM_section4_product.png')] bg-no-repeat lg:bg-[-134px_center] bg-[90px_top] lg:bg-cover bg-[length:300px_150px]"></div>
         }
       />
       <FeatureSection
@@ -124,15 +110,10 @@ export default function RrhForexCrmPage() {
         description="Create your own profit-sharing system — # Forex CRM # PAMM # CopyTrading"
         reverse={true}
         dom={
-          <div
-            className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_section5_product.png')] bg-no-repeat bg-cover"
-            style={{
-              backgroundPositionX: '274px',
-            }}
-          ></div>
+          <div className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_section5_product.png')] bg-no-repeat lg:bg-[274px_center] bg-[55px_top] lg:bg-cover bg-[length:300px_150px]"></div>
         }
       />
-      <div className="h-[960px] pt-[136px]">
+      <div className="lg:h-[960px] h-auto lg:pt-[136px] py-[24px]">
         <FAQSection questions={questions} />
       </div>
     </div>
