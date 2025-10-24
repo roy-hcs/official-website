@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { RrhCommunication } from '@/components/icons/RrhCommunication';
-import { RrhChevronDown } from '@/components/icons/RrhChevronDown';
+// import { RrhChevronDown } from '@/components/icons/RrhChevronDown';
 import { RrhSocialMedia } from '@/components/icons/RrhSocialMedia';
 import { RrhMenu } from '@/components/icons/RrhMenu';
 import {
@@ -27,14 +27,15 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { RrhClose } from '../icons/RrhClose';
 import SubmitInfo from '../common/SubmitInfo';
+// import { link } from 'fs';
 export default function RrhHeader() {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
   const [isOpenMobile, setIsOpenMobile] = useState(false);
   const navigate = useRouter();
-  const handleClick = (link: string) => {
-    navigate.push(link);
-    setIsOpen(false);
-  };
+  // const handleClick = (link: string) => {
+  //   navigate.push(link);
+  //   setIsOpen(false);
+  // };
   const handleClickMobile = (link: string) => {
     navigate.push(link);
     setIsOpenMobile(false);
@@ -62,6 +63,10 @@ export default function RrhHeader() {
   const navItems = [
     { title: 'Insights', link: '' },
     { title: 'Events', link: '' },
+    { title: 'Home', link: '/' },
+    { title: 'Forex CRM', link: '/products/forex-CRM' },
+    { title: 'PAMM', link: '/products/pamm' },
+    { title: 'Copytrading', link: '/products/copy-trading' },
     { title: 'About', link: '/about-us' },
     { title: 'Contact', link: '/contact-us' },
   ];
@@ -138,7 +143,7 @@ export default function RrhHeader() {
 
               <div className="flex-1">
                 <div className="flex">
-                  <div className="px-4 py-2">
+                  {/* <div className="px-4 py-2">
                     <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
                       <DropdownMenuTrigger className="font-medium text-sm text-[#0a0a0a] focus:outline-none flex items-center group">
                         Products
@@ -167,7 +172,7 @@ export default function RrhHeader() {
                         })}
                       </DropdownMenuContent>
                     </DropdownMenu>
-                  </div>
+                  </div> */}
                   {navItems
                     .filter(item => item.link)
                     .map(({ title, link }) => {
