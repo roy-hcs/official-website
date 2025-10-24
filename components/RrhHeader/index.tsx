@@ -20,9 +20,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { CRMIcon } from '../icons/CRMIcon';
-import { PAMMIcon } from '../icons/PAMMIcon';
-import { CopyTradingIcon } from '../icons/CopyTradingIcon';
+// import { CRMIcon } from '../icons/CRMIcon';
+// import { PAMMIcon } from '../icons/PAMMIcon';
+// import { CopyTradingIcon } from '../icons/CopyTradingIcon';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { RrhClose } from '../icons/RrhClose';
@@ -40,26 +40,26 @@ export default function RrhHeader() {
     navigate.push(link);
     setIsOpenMobile(false);
   };
-  const dropdownItems = [
-    {
-      link: '/products/forex-CRM',
-      title: 'Forex CRM',
-      desc: 'Full-process AutomationMulti-asset Smart Operations Hub',
-      Icon: <CRMIcon className="size-8 group-hover:text-[#0154FC]" />,
-    },
-    {
-      link: '/products/pamm',
-      title: 'PAMM',
-      desc: 'Pooled Fund Management ·Proportional Profit Allocation · Share-based Investment Model',
-      Icon: <PAMMIcon className="size-8 group-hover:text-[#0154FC]" />,
-    },
-    {
-      link: '/products/copy-trading',
-      title: 'Copy Trading',
-      desc: 'Strategy Replication · Multi-mode CopyTrading ·Social Trading Risk Control',
-      Icon: <CopyTradingIcon className="size-8 group-hover:text-[#0154FC]" />,
-    },
-  ];
+  // const dropdownItems = [
+  //   {
+  //     link: '/products/forex-CRM',
+  //     title: 'Forex CRM',
+  //     desc: 'Full-process AutomationMulti-asset Smart Operations Hub',
+  //     Icon: <CRMIcon className="size-8 group-hover:text-[#0154FC]" />,
+  //   },
+  //   {
+  //     link: '/products/pamm',
+  //     title: 'PAMM',
+  //     desc: 'Pooled Fund Management ·Proportional Profit Allocation · Share-based Investment Model',
+  //     Icon: <PAMMIcon className="size-8 group-hover:text-[#0154FC]" />,
+  //   },
+  //   {
+  //     link: '/products/copy-trading',
+  //     title: 'Copy Trading',
+  //     desc: 'Strategy Replication · Multi-mode CopyTrading ·Social Trading Risk Control',
+  //     Icon: <CopyTradingIcon className="size-8 group-hover:text-[#0154FC]" />,
+  //   },
+  // ];
   const navItems = [
     { title: 'Insights', link: '' },
     { title: 'Events', link: '' },
@@ -68,7 +68,7 @@ export default function RrhHeader() {
     { title: 'PAMM', link: '/products/pamm' },
     { title: 'Copytrading', link: '/products/copy-trading' },
     { title: 'About', link: '/about-us' },
-    { title: 'Contact', link: '/contact-us' },
+    { title: 'Contact', link: '' },
   ];
   return (
     <>
@@ -213,16 +213,18 @@ export default function RrhHeader() {
             <RrhMenu />
           </DropdownMenuTrigger>
           <DropdownMenuContent>
-            {dropdownItems.map(({ link, title }) => {
-              return (
-                <DropdownMenuItem
-                  key={title}
-                  onSelect={() => handleClickMobile(link)}
-                >
-                  <div>{title}</div>
-                </DropdownMenuItem>
-              );
-            })}
+            {navItems
+              .filter(item => item.link)
+              .map(({ link, title }) => {
+                return (
+                  <DropdownMenuItem
+                    key={title}
+                    onSelect={() => handleClickMobile(link)}
+                  >
+                    <div>{title}</div>
+                  </DropdownMenuItem>
+                );
+              })}
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
