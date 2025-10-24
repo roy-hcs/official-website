@@ -43,7 +43,7 @@ export default function RrhCopyTradingPage() {
     },
   ];
   return (
-    <div className="w-full h-full max-w-[1920px] mx-auto overflow-y-auto">
+    <div className="w-full max-w-[1920px] mx-auto">
       <div className="w-full lg:h-[910px] h-[455px] relative">
         <div className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_here_section_bg.png')] bg-no-repeat bg-center bg-cover"></div>
         <div

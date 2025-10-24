@@ -14,10 +14,15 @@ export const FeatureSection = ({
 }) => {
   return (
     <div className="w-full lg:h-[960px] h-[480px] relative">
-      <div className={cn('lg:w-[1280px] w-full m-auto h-full relative')}>
+      {dom}
+      <div
+        className={cn(
+          'lg:w-[1280px] w-full flex flex-col md:flex-row items-center mx-auto h-full relative gap-3 md:gap-10'
+        )}
+      >
         <div
           className={cn(
-            'lg:w-[584px] w-full absolute text-center top-1/2 -translate-y-1/2',
+            'basis-1/2 shrink-0 grow-0',
             reverse ? 'left-0' : 'right-0'
           )}
         >
@@ -28,8 +33,8 @@ export const FeatureSection = ({
             {description}
           </p>
         </div>
+        <div className="basis-1/2 shrink-0 grow-0"></div>
       </div>
-      {dom}
     </div>
   );
 };
