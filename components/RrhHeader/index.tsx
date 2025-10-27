@@ -2,10 +2,17 @@
 
 import Link from 'next/link';
 import { RrhCommunication } from '@/components/icons/RrhCommunication';
-import { RrhChevronDown } from '@/components/icons/RrhChevronDown';
+// import { RrhChevronDown } from '@/components/icons/RrhChevronDown';
 import { RrhSocialMedia } from '@/components/icons/RrhSocialMedia';
 import { RrhMenu } from '@/components/icons/RrhMenu';
-
+import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogTrigger,
+  AlertDialogCancel,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from '@/components/ui/alert-dialog';
 import Image from 'next/image';
 import {
   DropdownMenu,
@@ -13,42 +20,60 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import { CRMIcon } from '../icons/CRMIcon';
-import { PAMMIcon } from '../icons/PAMMIcon';
-import { CopyTradingIcon } from '../icons/CopyTradingIcon';
+// import { CRMIcon } from '../icons/CRMIcon';
+// import { PAMMIcon } from '../icons/PAMMIcon';
+// import { CopyTradingIcon } from '../icons/CopyTradingIcon';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { RrhClose } from '../icons/RrhClose';
+import SubmitInfo from '../common/SubmitInfo';
+// import { link } from 'fs';
 export default function RrhHeader() {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false);
+  const [isOpenMobile, setIsOpenMobile] = useState(false);
   const navigate = useRouter();
-  const handleClick = (link: string) => {
+  // const handleClick = (link: string) => {
+  //   navigate.push(link);
+  //   setIsOpen(false);
+  // };
+  const handleClickMobile = (link: string) => {
     navigate.push(link);
-    setIsOpen(false);
+    setIsOpenMobile(false);
   };
-  const dropdownItems = [
-    {
-      link: '/products/forexCRM',
-      title: 'Forex CRM',
-      desc: 'Full-process AutomationMulti-asset Smart Operations Hub',
-      Icon: <CRMIcon className="size-8 group-hover:text-[#0154FC]" />,
-    },
-    {
-      link: '/products/pamm',
-      title: 'PAMM',
-      desc: 'Pooled Fund Management ·Proportional Profit Allocation · Share-based Investment Model',
-      Icon: <PAMMIcon className="size-8 group-hover:text-[#0154FC]" />,
-    },
-    {
-      link: '/products/copyTrading',
-      title: 'Copy Trading',
-      desc: 'Strategy Replication · Multi-mode CopyTrading ·Social Trading Risk Control',
-      Icon: <CopyTradingIcon className="size-8 group-hover:text-[#0154FC]" />,
-    },
+  // const dropdownItems = [
+  //   {
+  //     link: '/products/forex-CRM',
+  //     title: 'CRM',
+  //     desc: 'Full-process AutomationMulti-asset Smart Operations Hub',
+  //     Icon: <CRMIcon className="size-8 group-hover:text-[#0154FC]" />,
+  //   },
+  //   {
+  //     link: '/products/pamm',
+  //     title: 'PAMM',
+  //     desc: 'Pooled Fund Management ·Proportional Profit Allocation · Share-based Investment Model',
+  //     Icon: <PAMMIcon className="size-8 group-hover:text-[#0154FC]" />,
+  //   },
+  //   {
+  //     link: '/products/copy-trading',
+  //     title: 'Copy Trading',
+  //     desc: 'Strategy Replication · Multi-mode CopyTrading ·Social Trading Risk Control',
+  //     Icon: <CopyTradingIcon className="size-8 group-hover:text-[#0154FC]" />,
+  //   },
+  // ];
+  const navItems = [
+    { title: 'Insights', link: '' },
+    { title: 'Events', link: '' },
+    { title: 'Home', link: '/' },
+    { title: 'CRM', link: '/products/forex-CRM' },
+    { title: 'PAMM', link: '/products/pamm' },
+    { title: 'Copytrading', link: '/products/copy-trading' },
+    { title: 'About', link: '/about-us' },
+    { title: 'Contact', link: '' },
   ];
   return (
     <>
       {/* pc */}
-      <div className="w-full lg:block hidden sticky top-0 left-0 z-[99] bg-[linear-gradient(90deg,#4DEEFF_0%,#0DD1FC_11%,#0154FC_27%,#050818_66%)]">
+      <div className="w-full lg:block hidden sticky top-0 left-0 z-[1] bg-[linear-gradient(90deg,#4DEEFF_0%,#0DD1FC_11%,#0154FC_27%,#050818_66%)]">
         <div className="w-full flex justify-center">
           <div className="flex-1 flex h-11 items-center justify-between max-w-320">
             <div className="text-[#fff] text-base font-normal">
@@ -78,7 +103,7 @@ export default function RrhHeader() {
         </div>
       </div>
       {/* mobile */}
-      <div className="lg:hidden block w-full py-[12px] px-[24px] sticky top-0 left-0 z-[99] bg-[linear-gradient(90deg,#4DEEFF_0%,#0DD1FC_11%,#0154FC_27%,#050818_66%)]">
+      <div className="lg:hidden block w-full py-[12px] px-[24px] sticky top-0 left-0 z-[1] bg-[linear-gradient(90deg,#4DEEFF_0%,#0DD1FC_11%,#0154FC_27%,#050818_66%)]">
         <div className="text-[#fff] text-sm font-normal">
           Multi-asset Fintech service platform
         </div>
@@ -102,7 +127,7 @@ export default function RrhHeader() {
         </div>
       </div>
       {/* pc */}
-      <div className="w-full lg:block hidden sticky top-[44px] left-0 z-[99]">
+      <div className="w-full lg:block hidden sticky top-[44px] left-0 z-[1]">
         <div className="w-full flex justify-center h-17 py-4 bg-white/60 backdrop-blur-[31.3px]">
           <div className="flex-1 flex items-center justify-between max-w-320">
             <div className="flex items-center gap-6">
@@ -118,7 +143,7 @@ export default function RrhHeader() {
 
               <div className="flex-1">
                 <div className="flex">
-                  <div className="px-4 py-2">
+                  {/* <div className="px-4 py-2">
                     <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
                       <DropdownMenuTrigger className="font-medium text-sm text-[#0a0a0a] focus:outline-none flex items-center group">
                         Products
@@ -132,7 +157,7 @@ export default function RrhHeader() {
                           return (
                             <DropdownMenuItem
                               key={title}
-                              className="group text-[#020f2c] hover:text-[#0154FC] hover:bg-[#0154FC0D] items-start flex gap-6 rounded-[16px] pt-4 px-4 pb-[38px]"
+                              className="group text-[#020f2c] cursor-pointer hover:text-[#0154FC] hover:bg-[#0154FC0D] items-start flex gap-6 rounded-[16px] pt-4 px-4 pb-[38px]"
                               onSelect={() => handleClick(link)}
                             >
                               <div className="grow-0 shrink-0 mt-2">{Icon}</div>
@@ -147,52 +172,59 @@ export default function RrhHeader() {
                         })}
                       </DropdownMenuContent>
                     </DropdownMenu>
-                  </div>
-                  <div className="px-4 py-2">
-                    <div className="font-medium text-sm text-[#0a0a0a]">
-                      Insights
-                    </div>
-                  </div>
-                  <div className="px-4 py-2">
-                    <div className="font-medium text-sm text-[#0a0a0a]">
-                      Events
-                    </div>
-                  </div>
-                  <div className="px-4 py-2">
-                    <div className="font-medium text-sm text-[#0a0a0a]">
-                      About
-                    </div>
-                  </div>
-                  <div className="px-4 py-2">
-                    <div className="font-medium text-sm text-[#0a0a0a]">
-                      Contact
-                    </div>
-                  </div>
+                  </div> */}
+                  {navItems
+                    .filter(item => item.link)
+                    .map(({ title, link }) => {
+                      return (
+                        <Link key={title} href={link} className="px-4 py-2">
+                          <div className="font-medium text-sm text-[#0a0a0a]">
+                            {title}
+                          </div>
+                        </Link>
+                      );
+                    })}
                 </div>
               </div>
             </div>
-            <div className="py-2 px-4 rounded-md border border-[#E5E5E5] text-sm font-medium leading-5">
-              Get A Demo
-            </div>
+            <AlertDialog>
+              <AlertDialogTrigger className="py-2 px-4 rounded-md border border-[#E5E5E5] text-sm font-medium leading-5">
+                Get A Demo
+              </AlertDialogTrigger>
+              <AlertDialogContent>
+                <AlertDialogCancel className="absolute top-4 right-4 h-8 w-8 rounded-full p-0 hover:bg-gray-100 border-0">
+                  <div className="w-[24px] h-[24px]">
+                    <RrhClose />
+                  </div>
+                </AlertDialogCancel>
+                <AlertDialogHeader>
+                  <AlertDialogTitle className="text-2xl font-semibold text-center"></AlertDialogTitle>
+                </AlertDialogHeader>
+                <SubmitInfo />
+              </AlertDialogContent>
+            </AlertDialog>
           </div>
         </div>
       </div>
       {/* mobile */}
-      <div className="lg:hidden block w-full sticky top-[76px] left-0 z-[99] py-[12px] px-[24px] bg-[#ffffff] text-right">
-        <DropdownMenu>
+      <div className="lg:hidden block w-full sticky top-[76px] left-0 z-[1] py-[12px] px-[24px] bg-[#ffffff] text-right">
+        <DropdownMenu open={isOpenMobile} onOpenChange={setIsOpenMobile}>
           <DropdownMenuTrigger>
             <RrhMenu />
           </DropdownMenuTrigger>
           <DropdownMenuContent>
-            <DropdownMenuItem>
-              <Link href="/products/forexCRM">Forex CRM</Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Link href="/products/copyTrading">Copytrading</Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem>
-              <Link href="/products/pamm">PAMM</Link>
-            </DropdownMenuItem>
+            {navItems
+              .filter(item => item.link)
+              .map(({ link, title }) => {
+                return (
+                  <DropdownMenuItem
+                    key={title}
+                    onSelect={() => handleClickMobile(link)}
+                  >
+                    <div>{title}</div>
+                  </DropdownMenuItem>
+                );
+              })}
           </DropdownMenuContent>
         </DropdownMenu>
       </div>

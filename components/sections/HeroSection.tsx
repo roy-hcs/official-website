@@ -8,7 +8,8 @@ export function HeroSection() {
         <div className="lg:h-[1104px] h-auto">
           <div className="lg:w-[672px] lg:mt-[140px] mt-[70px] w-full">
             <div className="text-[#041433] lg:text-5xl text-4xl font-bold text-center">
-              Leading CRM for Brokerages & Exchanges
+              <div>Leading CRM for</div>
+              <div>Brokerages & Exchanges</div>
             </div>
             <div className="mb-8 mt-6 text-[#737373] font-normal lg:text-lg text-base leading-7 text-center">
               Create your own profit-sharing system — # Forex CRM # PAMM #

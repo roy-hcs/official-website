@@ -1,42 +1,41 @@
 import { cn } from '@/lib/utils';
-import Image from 'next/image';
+import React from 'react';
 
 export const FeatureSection = ({
   title,
   description,
-  image,
-  link,
-  linkText,
+  PcImg,
+  MobileImg,
   reverse = false,
 }: {
   title: string;
   description: string;
-  image?: string;
-  link?: string;
-  linkText?: string;
+  PcImg: React.ReactNode;
+  MobileImg: React.ReactNode;
   reverse?: boolean;
 }) => {
   return (
-    <div className="w-full">
+    <div className="w-full lg:h-[960px] relative">
+      {PcImg}
       <div
         className={cn(
-          'w-[1280px] px-6 flex gap-16 items-center m-auto',
-          reverse ? 'flex-row-reverse' : 'flex-row'
+          'lg:w-[1280px] w-full flex flex-col md:flex-row items-center mx-auto h-full relative gap-3 md:gap-10',
+          reverse ? 'md:flex-row-reverse' : ''
         )}
       >
-        <div className="basis-1/2 flex-1 bg-green-500 h-full">
-          {image && (
-            <Image src={image} alt={title} className="w-full h-auto " />
-          )}
+        <div className="basis-1/2 shrink-0 grow-0"></div>
+        <div
+          className={cn('basis-1/2 shrink-0 grow-0 md:text-left text-center')}
+        >
+          <h2 className="lg:text-4xl text-3xl font-bold text-[#0a0a0a]">
+            {title}
+          </h2>
+          <p className="lg:text-base text-sm text-[#737373] mt-[20px]">
+            {description}
+          </p>
         </div>
-        <div className="flex flex-col gap-8 basis-1/2 flex-1 outline">
-          <h2 className="text-4xl font-bold text-[#0a0a0a]">{title}</h2>
-          <p className="text-[#737373] text-base">{description}</p>
-          {link && linkText && (
-            <a href={link} className="text-[#0a0a0a] text-base font-semibold">
-              {linkText}
-            </a>
-          )}
+        <div className="relative h-120 -my-15 w-full md:hidden">
+          {MobileImg}
         </div>
       </div>
     </div>
