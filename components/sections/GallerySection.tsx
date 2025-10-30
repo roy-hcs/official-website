@@ -9,7 +9,7 @@ export function GallerySection() {
       />
       <div className="w-full flex justify-center">
         <div className="w-full lg:w-320">
-          <div className="mt-[48px] grid lg:grid-cols-3 lg:gap-[24px] gap-[6px] grid-cols-1">
+          <div className="mt-12 grid lg:grid-cols-3 lg:gap-6 gap-1.5 grid-cols-1">
             <div className="relative w-full">
               <div className="pt-[100%]" />
               <div className="absolute inset-0 bg-[url('/assets/home/1.png')] bg-no-repeat bg-center bg-cover"></div>

@@ -76,7 +76,7 @@ export default function RrhFooter() {
   ];
 
   return (
-    <div className="w-full md:h-[890px] mx-auto bg-[url('/assets/页尾背景.png')] bg-white bg-no-repeat bg-[center_38px] bg-[length:100%] text-center">
+    <div className="w-full md:h-[890px] mx-auto bg-[url('https://rrh-cn.oss-cn-shenzhen.aliyuncs.com/images/bg4.png')] bg-white bg-no-repeat bg-[center_38px] bg-[length:100%] text-center">
       <div className="relative md:w-[1106px] mx-auto pt-15 md:pt-[166px] w-full px-4">
         <Image
           src="/assets/haame-logo.png"

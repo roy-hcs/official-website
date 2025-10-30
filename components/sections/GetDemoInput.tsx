@@ -15,7 +15,7 @@ export default function GetDemoInput() {
   const [email, setEmail] = useState('');
   return (
     <div
-      className="p-1 w-[584px] h-[60px] rounded-xl box-border flex items-center justify-center max-[750px]:w-full"
+      className="p-1 w-[584px] h-15 rounded-xl box-border flex items-center justify-center max-[750px]:w-full"
       style={{
         background:
           'linear-gradient(180deg, rgba(77, 238, 255, 0.1) 0%, rgba(115, 59, 255, 0.1) 100%)',
@@ -38,7 +38,7 @@ export default function GetDemoInput() {
           <AlertDialogContent>
             {/* 右上角关闭按钮 */}
             <AlertDialogCancel className="absolute top-4 right-4 h-8 w-8 rounded-full p-0 hover:bg-gray-100 border-0">
-              <div className="w-[24px] h-[24px]">
+              <div className="size-6">
                 <CloseIcon />
               </div>
             </AlertDialogCancel>
