@@ -2,7 +2,7 @@ import { SectionHeader } from '@/components/common/SectionHeader';
 
 export function SystemArchitectureSection() {
   return (
-    <div className="w-full lg:h-[1086px] h-[700px] relative">
+    <div className="w-full lg:h-[1086px] relative">
       <div className="absolute -z-1 inset-0 bg-[url('/assets/页尾背景.png')] rotate-180 bg-[#ffffff] bg-no-repeat bg-[center_0px] bg-[length:100%]"></div>
       <div className="w-full lg:pt-[140px] pt-[70px]">
         <SectionHeader

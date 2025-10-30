@@ -29,13 +29,13 @@ const TabContent = ({
       <div className="flex flex-col md:flex-row items-center gap-3  md:gap-10 relative md:h-[760px] ">
         {PcImg}
         <div className="basis-1/2 shrink-0 grow-0 p-3">
-          <h2 className="lg:text-4xl text-3xl font-bold text-[#0a0a0a]">
+          <h2 className="lg:text-4xl text-2xl text-center md:text-left font-bold text-[#0a0a0a]">
             {title}
           </h2>
-          <p className="lg:text-base text-sm text-[#737373] mt-[20px]">
+          <p className="lg:text-base text-sm text-center md:text-left text-[#737373] mt-[20px]">
             {desc}
           </p>
-          <Button className="mt-10">
+          <Button className="hidden md:block mt-10">
             <Link className="flex gap-2 items-center" href={link}>
               <span>Read More</span>
               <RrhRightArrow />
@@ -58,10 +58,10 @@ export function ProductsWeOfferSection() {
       title: 'Flexibly adapt to multiple business scenarios',
       desc: 'Customize fields, processes and permissions to meet the needs of different teams and business lines.',
       PcImg: (
-        <div className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_section2_product.png')] bg-no-repeat lg:bg-position-[340_center] hidden lg:block bg-[length:120%]"></div>
+        <div className="absolute -z-1 inset-0 bg-[url('https://rrh-cn.oss-cn-shenzhen.aliyuncs.com/images/CRM_section2_product.png')] bg-no-repeat lg:bg-position-[340_center] hidden lg:block bg-[length:120%]"></div>
       ),
       MobileImg: (
-        <div className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_section2_product.png')]  bg-no-repeat block lg:hidden bg-position-[-120_-20] bg-[length:200%]"></div>
+        <div className="absolute -z-1 inset-0 bg-[url('https://rrh-cn.oss-cn-shenzhen.aliyuncs.com/images/CRM_section2_product.png')]  bg-no-repeat block lg:hidden bg-position-[-120_-20] bg-[length:200%]"></div>
       ),
       link: '/products/forex-CRM',
       mobileImgCls: 'h-100',
@@ -71,10 +71,10 @@ export function ProductsWeOfferSection() {
       title: 'Flexible Profit-Sharing & Commission Models',
       desc: 'Supports a multi-tier profit distribution structure, creating a transparent and sustainable income ecosystem. Fund managers, sales agents, and the platform share performance-based profits, commissions, and management fees — motivating all stakeholders for active participation and long-term collaboration.',
       PcImg: (
-        <div className="absolute inset-x-0 -inset-y-[120px] -z-1 inset-0 bg-[url('/assets/PAMMSection3Product.png')] hidden md:block bg-position-[160%_0] bg-no-repeat bg-contain"></div>
+        <div className="absolute inset-x-0 -inset-y-[120px] -z-1 inset-0 bg-[url('https://rrh-cn.oss-cn-shenzhen.aliyuncs.com/images/PAMMSection3Product.png')] hidden md:block bg-position-[160%_0] bg-no-repeat bg-contain"></div>
       ),
       MobileImg: (
-        <div className="absolute inset-0 -z-1 bg-[url('/assets/PAMMSection3Product.png')] block md:hidden bg-position-[-170_-200] bg-no-repeat bg-[length:170%]"></div>
+        <div className="absolute inset-0 -z-1 bg-[url('https://rrh-cn.oss-cn-shenzhen.aliyuncs.com/images/PAMMSection3Product.png')] block md:hidden bg-position-[-170_-200] bg-no-repeat bg-[length:170%]"></div>
       ),
       link: '/products/pamm',
       mobileImgCls: 'h-110',
@@ -84,10 +84,10 @@ export function ProductsWeOfferSection() {
       title: 'Flexible Copy Modes for Diverse Needs',
       desc: 'Supports multiple copy modes — fixed ratio, dynamic allocation, or custom risk settings. Traders can freely choose or create signal sources, catering to both beginners and professionals. Signal providers can publish strategies after platform approval to ensure operational control and transparency.',
       PcImg: (
-        <div className="absolute -z-1 inset-0 bg-[url('/assets/CopyTrading/CopyTrading_section3_product.png')] bg-no-repeat lg:bg-position-[200_center] hidden lg:block bg-[length:100%]"></div>
+        <div className="absolute -z-1 inset-0 bg-[url('https://rrh-cn.oss-cn-shenzhen.aliyuncs.com/images/CopyTrading_section3_product.png')] bg-no-repeat lg:bg-position-[200_center] hidden lg:block bg-[length:100%]"></div>
       ),
       MobileImg: (
-        <div className="absolute -z-1 inset-0 bg-[url('/assets/CopyTrading/CopyTrading_section3_product.png')]  bg-no-repeat block lg:hidden bg-position-[-260_-35] bg-[length:200%]"></div>
+        <div className="absolute -z-1 inset-0 bg-[url('https://rrh-cn.oss-cn-shenzhen.aliyuncs.com/images/CopyTrading_section3_product.png')]  bg-no-repeat block lg:hidden bg-position-[-260_-35] bg-[length:200%]"></div>
       ),
       link: '/products/copy-trading',
       mobileImgCls: 'h-100',
@@ -110,7 +110,7 @@ export function ProductsWeOfferSection() {
             {tabs.map(item => (
               <TabsTrigger
                 key={item}
-                className="px-2 py-1 min-w-[131px] h-7.5"
+                className="px-4 md:px-2 py-1 md:min-w-[131px] h-7.5"
                 value={item}
               >
                 {item}

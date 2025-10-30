@@ -35,7 +35,7 @@ const HeroBanner = () => {
   ];
   return (
     <div className="w-full md:aspect-[1.94] mb-42.5 mx-auto bg-white text-center relative">
-      <div className="absolute inset-0 before:absolute  before:inset-0 before:bg-[url('/assets/AboutUsHeroSectionBg.png')] hidden md:block before:bg-no-repeat before:bg-[center_38px] before:bg-contain"></div>
+      <div className="absolute inset-0 before:absolute  before:inset-0 before:bg-[url('https://rrh-cn.oss-cn-shenzhen.aliyuncs.com/images/AboutUsHeroSectionBg.png')] hidden md:block before:bg-no-repeat before:bg-[center_38px] before:bg-contain"></div>
       <div className="md:w-[1280px] mx-auto relative h-full flex flex-col md:flex-row items-center justify-start">
         <div className="flex flex-col text-left p-3 md:pb-30 w-auto md:w-[670px] text-[#020f2c]">
           <h2 className="text-4xl md:text-[72px] font-bold mb-2 md:mb-4">
@@ -80,7 +80,7 @@ const HeroBanner = () => {
 
 const InvestBanner = () => {
   return (
-    <div className="md:aspect-[1.94] md:mt-[115px] md:bg-[url('/assets/AboutUsSection2Bg.png')] bg-no-repeat  bg-contain bg-center">
+    <div className="md:aspect-[1.94] md:mt-[115px] md:bg-[url('https://rrh-cn.oss-cn-shenzhen.aliyuncs.com/images/AboutUsSection2Bg.png')] bg-no-repeat  bg-contain bg-center">
       <div className="hidden md:block w-full aspect-[1/0.36]"></div>
       <div className="md:w-[1200px] mx-auto">
         <div className="flex flex-col items-center justify-center text-[#020f2c] p-3 md:p-0 text-sm md:text-xl md:font-medium capitalize">
@@ -110,7 +110,7 @@ const DevelopmentHistory = () => {
       </div>
       <div className="aspect-[1.86] md:h-[615px] relative w-full">
         <Image
-          src="/assets/AboutUsSection3Bg.png"
+          src="https://rrh-cn.oss-cn-shenzhen.aliyuncs.com/images/AboutUsSection3Bg.png"
           alt="development history"
           fill
           style={{

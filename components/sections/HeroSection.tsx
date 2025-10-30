@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 export function HeroSection() {
   return (
     <div className="w-full relative">
-      <div className="absolute -z-1 inset-0 bg-[url('/assets/grid-bg.png'),_url('/assets/首图背景.png')] bg-no-repeat bg-center bg-cover"></div>
+      <div className="absolute -z-1 inset-0 bg-[url('/assets/grid-bg.png'),_url('https://rrh-cn.oss-cn-shenzhen.aliyuncs.com/images/bg3.png')] bg-no-repeat bg-center bg-cover"></div>
       <div className="flex justify-center">
         <div className="lg:h-[1104px] h-auto">
           <div className="lg:w-[672px] lg:mt-[140px] mt-[70px] w-full">

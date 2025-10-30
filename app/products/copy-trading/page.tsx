@@ -45,9 +45,9 @@ export default function RrhCopyTradingPage() {
   return (
     <div className="w-full max-w-[1920px] mx-auto">
       <div className="w-full lg:h-[910px] h-[455px] relative">
-        <div className="absolute -z-1 inset-0 bg-[url('/assets/CRM/CRM_here_section_bg.png')] bg-no-repeat bg-center bg-cover"></div>
+        <div className="absolute -z-1 inset-0 bg-[url('/assets/PAMMHeroSectionGridBg.png')] bg-no-repeat bg-center bg-cover"></div>
         <div
-          className="absolute -z-1 inset-0 lg:bg-[url('/assets/CopyTrading/CopyTrading_hero_section_bg.png')] bg-no-repeat bg-cover"
+          className="absolute -z-1 inset-0 lg:bg-[url('https://rrh-cn.oss-cn-shenzhen.aliyuncs.com/images/CopyTrading_hero_section_bg.png')] bg-no-repeat bg-cover"
           style={{
             backgroundPositionX: '155px',
             backgroundPositionY: '-104px',
@@ -64,10 +64,10 @@ export default function RrhCopyTradingPage() {
         title="Seamless Integration & Rapid Deployment"
         description="Fully integrated within the CRM environment. Clients can access CopyTrading directly from their existing accounts — no external systems or extra logins required. Smooth, fast, and intuitive onboarding."
         PcImg={
-          <div className="absolute -z-1 inset-0 bg-[url('/assets/CopyTrading/CopyTrading_section2_product.png')] hidden md:block bg-no-repeat lg:bg-[-304px_center] lg:bg-cover"></div>
+          <div className="absolute -z-1 inset-0 bg-[url('https://rrh-cn.oss-cn-shenzhen.aliyuncs.com/images/CopyTrading_section2_product.png')] hidden md:block bg-no-repeat lg:bg-[-304px_center] lg:bg-cover"></div>
         }
         MobileImg={
-          <div className="absolute -z-1 inset-0 bg-[url('/assets/CopyTrading/CopyTrading_section2_product.png')] block md:hidden bg-no-repeat bg-position-[-180_25] bg-[length:200%]"></div>
+          <div className="absolute -z-1 inset-0 bg-[url('https://rrh-cn.oss-cn-shenzhen.aliyuncs.com/images/CopyTrading_section2_product.png')] block md:hidden bg-no-repeat bg-position-[-180_25] bg-[length:200%]"></div>
         }
       />
       <FeatureSection
@@ -75,20 +75,20 @@ export default function RrhCopyTradingPage() {
         description="Covers the entire client journey — from registration, KYC, deposit, trading to reinvestment. Empower your sales and IB teams with flexible segmentation and tagging to enhance retention and conversion."
         reverse={true}
         PcImg={
-          <div className="absolute -z-1 inset-0 bg-[url('/assets/CopyTrading/CopyTrading_section3_product.png')] hidden md:block bg-no-repeat lg:bg-[274px_center] lg:bg-cover"></div>
+          <div className="absolute -z-1 inset-0 bg-[url('https://rrh-cn.oss-cn-shenzhen.aliyuncs.com/images/CopyTrading_section3_product.png')] hidden md:block bg-no-repeat lg:bg-[274px_center] lg:bg-cover"></div>
         }
         MobileImg={
-          <div className="absolute -z-1 inset-0 bg-[url('/assets/CopyTrading/CopyTrading_section3_product.png')] block md:hidden bg-no-repeat bg-position-[-250_20] bg-[length:200%]"></div>
+          <div className="absolute -z-1 inset-0 bg-[url('https://rrh-cn.oss-cn-shenzhen.aliyuncs.com/images/CopyTrading_section3_product.png')] block md:hidden bg-no-repeat bg-position-[-250_20] bg-[length:200%]"></div>
         }
       />
       <FeatureSection
         title="Intelligent Risk Control"
         description="Advanced risk management tools protect client assets — including auto take-profit/stop-loss, position limits, and abnormal trading alerts — ensuring system security and stability"
         PcImg={
-          <div className="absolute -z-1 inset-0  bg-[url('/assets/CopyTrading/CopyTrading_section4_product.png')] hidden md:block bg-no-repeat lg:bg-[-450px_center] lg:bg-cover"></div>
+          <div className="absolute -z-1 inset-0  bg-[url('https://rrh-cn.oss-cn-shenzhen.aliyuncs.com/images/CopyTrading_section4_product.png')] hidden md:block bg-no-repeat lg:bg-[-450px_center] lg:bg-cover"></div>
         }
         MobileImg={
-          <div className="absolute -z-1 inset-0  bg-[url('/assets/CopyTrading/CopyTrading_section4_product.png')] block md:hidden bg-no-repeat bg-position-[-220_50] bg-[length:200%]"></div>
+          <div className="absolute -z-1 inset-0  bg-[url('https://rrh-cn.oss-cn-shenzhen.aliyuncs.com/images/CopyTrading_section4_product.png')] block md:hidden bg-no-repeat bg-position-[-220_50] bg-[length:200%]"></div>
         }
       />
       <FeatureSection
@@ -96,10 +96,10 @@ export default function RrhCopyTradingPage() {
         description="Comprehensive CopyTrading analytics — from trader performance to follower behavior and volume trends. Gain actionable insights to refine marketing and attract high-value clients."
         reverse={true}
         PcImg={
-          <div className="absolute -z-1 inset-0 bg-[url('/assets/CopyTrading/CopyTrading_section5_product.png')] hidden md:block bg-no-repeat lg:bg-[506px_center] lg:bg-cover"></div>
+          <div className="absolute -z-1 inset-0 bg-[url('https://rrh-cn.oss-cn-shenzhen.aliyuncs.com/images/CopyTrading_section5_product.png')] hidden md:block bg-no-repeat lg:bg-[506px_center] lg:bg-cover"></div>
         }
         MobileImg={
-          <div className="absolute -z-1 inset-0 bg-[url('/assets/CopyTrading/CopyTrading_section5_product.png')] block md:hidden bg-no-repeat bg-position-[-150_50px] bg-[length:200%]"></div>
+          <div className="absolute -z-1 inset-0 bg-[url('https://rrh-cn.oss-cn-shenzhen.aliyuncs.com/images/CopyTrading_section5_product.png')] block md:hidden bg-no-repeat bg-position-[-150_50px] bg-[length:200%]"></div>
         }
       />
       <div className="lg:h-[960px] h-auto lg:pt-[136px] py-[24px]">
